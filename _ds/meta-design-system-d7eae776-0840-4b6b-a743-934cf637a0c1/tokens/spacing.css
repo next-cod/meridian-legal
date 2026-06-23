@@ -1,0 +1,47 @@
+/* ============================================================
+   SPACING, RADII & ELEVATION — Meta Design System
+   4px base grid, 8px dominant step.
+   ============================================================ */
+:root {
+  /* --- Spacing scale --- */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 10px;
+  --space-md: 12px;
+  --space-base: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-xxl: 32px;
+  --space-xxxl: 40px;
+  --space-section-sm: 48px;
+  --space-section: 64px;
+  --space-section-lg: 80px;
+  --space-hero: 120px;
+
+  /* --- Border radius --- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-xxl: 24px;
+  --radius-xxxl: 32px;
+  --radius-feature: 40px;
+  --radius-full: 100px;   /* Pill buttons / chips / badges */
+  --radius-circle: 9999px;
+
+  /* --- Containers --- */
+  --container-max: 1280px;
+  --rail-max: 380px;
+
+  /* --- Elevation (commerce-flow signal only; marketing stays flat) --- */
+  --shadow-pill: rgba(0, 0, 0, 0.2) 1px 1px 0px 0px;
+  --shadow-sticky: rgba(20, 22, 26, 0.3) 0px 1px 4px 0px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --dur-fast: 150ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 300ms; /* @kind other */
+}

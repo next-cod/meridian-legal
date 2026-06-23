@@ -1,0 +1,8 @@
+/* ============================================================
+   FONTS — Meta Design System
+   Optimistic VF is Meta's proprietary variable display face and
+   cannot be redistributed. Montserrat (a documented fallback) is
+   substituted as the nearest geometric-humanist match on Google
+   Fonts. Replace with licensed Optimistic VF for production.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');

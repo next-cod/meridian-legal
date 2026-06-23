@@ -1,0 +1,65 @@
+/* ============================================================
+   COLORS — Meta Design System
+   Base palette + semantic aliases.
+   ============================================================ */
+:root {
+  /* --- Brand & Accent --- */
+  --color-primary: #0064e0;        /* Cobalt — buy-now CTA only */
+  --color-primary-deep: #0457cb;   /* Pressed / active link */
+  --color-primary-soft: #0091ff;   /* Informational tint base */
+  --color-on-primary: #ffffff;
+  --color-ink-button: #000000;     /* Marketing primary CTA */
+  --color-on-ink-button: #ffffff;
+  --color-fb-blue: #1876f2;        /* Form-control activation */
+  --color-meta-link: #385898;      /* Legacy nav / footer links */
+  --color-oculus-purple: #a121ce;  /* Quest / VR accent */
+
+  /* --- Semantic --- */
+  --color-success: #31a24c;
+  --color-success-bg: #24e400;
+  --color-attention: #f2a918;
+  --color-warning: #f7b928;        /* Promo banners / sale tags */
+  --color-warning-bg: #ffe200;
+  --color-critical: #e41e3f;
+  --color-critical-strong: #f0284a;
+
+  /* --- Surface --- */
+  --color-canvas: #ffffff;
+  --color-surface-soft: #f1f4f7;   /* Thumbnails, search pill rest */
+  --color-hairline: #ced0d4;       /* Input borders */
+  --color-hairline-soft: #dee3e9;  /* Card / section dividers */
+
+  /* --- Text / Ink ramp --- */
+  --color-ink-deep: #0a1317;       /* Primary headline + body */
+  --color-ink: #1c1e21;            /* Standard body */
+  --color-charcoal: #444950;       /* Tertiary body */
+  --color-slate: #4b4c4f;          /* Section header copy */
+  --color-steel: #5d6c7b;          /* Captions, footer links */
+  --color-stone: #8595a4;          /* De-emphasized labels */
+  --color-disabled-text: #bcc0c4;
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components
+     ============================================================ */
+  --text-strong: var(--color-ink-deep);
+  --text-body: var(--color-ink);
+  --text-secondary: var(--color-charcoal);
+  --text-muted: var(--color-steel);
+  --text-faint: var(--color-stone);
+  --text-disabled: var(--color-disabled-text);
+  --text-on-dark: var(--color-canvas);
+
+  --surface-page: var(--color-canvas);
+  --surface-card: var(--color-canvas);
+  --surface-soft: var(--color-surface-soft);
+  --surface-dark: var(--color-ink-deep);
+
+  --border-input: var(--color-hairline);
+  --border-card: var(--color-hairline-soft);
+  --border-ghost: rgba(10, 19, 23, 0.12);
+
+  --cta-marketing: var(--color-ink-button);
+  --cta-commerce: var(--color-primary);
+  --cta-commerce-pressed: var(--color-primary-deep);
+  --focus-ring: var(--color-fb-blue);
+}

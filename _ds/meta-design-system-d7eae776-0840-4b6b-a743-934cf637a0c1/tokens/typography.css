@@ -1,0 +1,97 @@
+/* ============================================================
+   TYPOGRAPHY — Meta Design System
+   Display face: Optimistic VF (proprietary).
+   Substituted with Montserrat (documented fallback) — see fonts.css.
+   ============================================================ */
+:root {
+  --font-display: 'Montserrat', 'Optimistic VF', Helvetica, Arial, 'Noto Sans', sans-serif;
+  --font-body: 'Montserrat', 'Optimistic VF', Helvetica, Arial, 'Noto Sans', sans-serif;
+  --font-mono: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Optimistic VF turns ss01 + ss02 on across all heading roles. */
+  --font-feature-headings: 'ss01' 1, 'ss02' 1;
+
+  /* Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* --- Type scale (size / line-height / tracking) --- */
+  --type-hero-size: 64px;     --type-hero-lh: 1.16;   --type-hero-weight: 500;
+  --type-display-size: 48px;  --type-display-lh: 1.17; --type-display-weight: 500;
+  --type-h1-size: 36px;       --type-h1-lh: 1.28;     --type-h1-weight: 500;
+  --type-h2-size: 28px;       --type-h2-lh: 1.21;     --type-h2-weight: 300;
+  --type-h3-size: 24px;       --type-h3-lh: 1.25;     --type-h3-weight: 500;
+  --type-subtitle-size: 18px; --type-subtitle-lh: 1.44;
+  --type-body-size: 16px;     --type-body-lh: 1.50;   --type-body-track: -0.16px;
+  --type-small-size: 14px;    --type-small-lh: 1.43;  --type-small-track: -0.14px;
+  --type-caption-size: 12px;  --type-caption-lh: 1.33;
+}
+
+/* ------------------------------------------------------------
+   Optional helper classes (components may use tokens directly)
+   ------------------------------------------------------------ */
+.t-hero {
+  font-family: var(--font-display);
+  font-size: var(--type-hero-size);
+  line-height: var(--type-hero-lh);
+  font-weight: var(--type-hero-weight);
+  font-feature-settings: var(--font-feature-headings);
+  letter-spacing: -0.5px;
+}
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-lh);
+  font-weight: var(--type-display-weight);
+  font-feature-settings: var(--font-feature-headings);
+  letter-spacing: -0.4px;
+}
+.t-h1 {
+  font-family: var(--font-display);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-lh);
+  font-weight: var(--type-h1-weight);
+  font-feature-settings: var(--font-feature-headings);
+}
+.t-h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-lh);
+  font-weight: var(--type-h2-weight);
+  font-feature-settings: var(--font-feature-headings);
+}
+.t-h3 {
+  font-family: var(--font-display);
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-lh);
+  font-weight: var(--type-h3-weight);
+  font-feature-settings: var(--font-feature-headings);
+}
+.t-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--type-subtitle-size);
+  line-height: var(--type-subtitle-lh);
+  font-weight: var(--weight-regular);
+}
+.t-body {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-track);
+  font-weight: var(--weight-regular);
+}
+.t-small {
+  font-family: var(--font-body);
+  font-size: var(--type-small-size);
+  line-height: var(--type-small-lh);
+  letter-spacing: var(--type-small-track);
+  font-weight: var(--weight-regular);
+}
+.t-caption {
+  font-family: var(--font-body);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-lh);
+  font-weight: var(--weight-regular);
+}
