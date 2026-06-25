@@ -21,30 +21,30 @@
   h1,h2,h3{font-weight:600!important}
   .tlink{position:relative;transition:color .2s ease}
   .tlink::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-  .tlink:hover{color:#8A5524}
+  .tlink:hover{color:#0A3A46}
   .tlink:hover::after{transform:scaleX(1)}
   html{scroll-behavior:smooth;scroll-padding-top:90px}
-  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#211C15;line-height:1.6;-webkit-font-smoothing:antialiased}
-  ::selection{background:#BE7B3E;color:#fff}
+  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#182A2B;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:#0F4C5C;color:#fff}
   a{color:inherit;text-decoration:none}
   ::-webkit-scrollbar{width:11px;height:11px}
-  ::-webkit-scrollbar-track{background:#F3EAD9}
-  ::-webkit-scrollbar-thumb{background:#CFA06A;border-radius:10px;border:2px solid #F3EAD9}
-  ::-webkit-scrollbar-thumb:hover{background:#A86A2E}
-  html{scrollbar-width:thin;scrollbar-color:#CFA06A #F3EAD9}
+  ::-webkit-scrollbar-track{background:#DCEAEC}
+  ::-webkit-scrollbar-thumb{background:#4E97A6;border-radius:10px;border:2px solid #DCEAEC}
+  ::-webkit-scrollbar-thumb:hover{background:#0F4C5C}
+  html{scrollbar-width:thin;scrollbar-color:#4E97A6 #DCEAEC}
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
   [data-inp][data-error="true"]{border-color:#C0492E!important;box-shadow:0 0 0 3px rgba(192,73,46,0.12)!important}
   [data-faq-ans]{overflow:hidden;max-height:0;opacity:0;padding-top:0;transition:max-height .42s ease,opacity .35s ease,padding-top .35s ease}
   [data-faq-ans][data-open="true"]{max-height:460px;opacity:1;padding-top:4px}
-  [data-faq-chev]{display:inline-flex;color:#8C8273;transition:transform .35s ease,color .2s ease}
-  [data-faq-chev][data-open="true"]{transform:rotate(180deg);color:#D29354}
-  .csel-chev{display:inline-flex;flex:none;color:#A86A2E;transition:transform .25s ease}
+  [data-faq-chev]{display:inline-flex;color:#738B8F;transition:transform .35s ease,color .2s ease}
+  [data-faq-chev][data-open="true"]{transform:rotate(180deg);color:#2A8499}
+  .csel-chev{display:inline-flex;flex:none;color:#0F4C5C;transition:transform .25s ease}
   [data-open="true"] .csel-chev{transform:rotate(180deg)}
-  .csel-opt{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 13px;border-radius:5px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Onest',sans-serif;font-size:15.5px;color:#3A332A;transition:background .15s ease,color .15s ease}
-  .csel-opt:hover{background:#FAF3E8;color:#A86A2E}
-  .csel-opt[data-active="true"]{background:#F3E7D6;color:#A86A2E}
-  .csel-opt .csel-ck{flex:none;opacity:0;color:#BE7B3E;transition:opacity .15s ease}
+  .csel-opt{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 13px;border-radius:5px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Onest',sans-serif;font-size:15.5px;color:#2B4346;transition:background .15s ease,color .15s ease}
+  .csel-opt:hover{background:#EAF4F5;color:#0F4C5C}
+  .csel-opt[data-active="true"]{background:#D8EBED;color:#0F4C5C}
+  .csel-opt .csel-ck{flex:none;opacity:0;color:#0F4C5C;transition:opacity .15s ease}
   .csel-opt[data-active="true"] .csel-ck{opacity:1}
   @media (max-width:880px){#ctaInner{grid-template-columns:1fr!important}#contactGrid{grid-template-columns:1fr 1fr!important}}
   @media (max-width:520px){#contactGrid{grid-template-columns:1fr!important}}
@@ -54,66 +54,66 @@
 <div style="background:#FFFFFF;font-family:'Onest',sans-serif;overflow-x:hidden">
   <dc-import name="Header" active="contacts" hint-size="100%,70px"></dc-import>
 
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(80px,11vw,114px) clamp(18px,4vw,40px) clamp(28px,3.5vw,40px);border-bottom:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#182A2B;padding:clamp(80px,11vw,114px) clamp(18px,4vw,40px) clamp(28px,3.5vw,40px);border-bottom:1px solid #D3E4E6">
     <div style="max-width:1240px;margin:0 auto">
-      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#978C7B;margin-bottom:26px"><a href="Home.dc.html" style="color:#A86A2E" style-hover="color:#8A5524 !important">Главная</a> · Контакты</div>
-      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(29px,4.2vw,45px);line-height:1.05;letter-spacing:-.022em;margin:0;color:#211C15;max-width:780px">Оставьте заявку – подберём страну и рассчитаем бюджет</h1>
+      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#7A9296;margin-bottom:26px"><a href="Home.dc.html" style="color:#0F4C5C" style-hover="color:#0A3A46 !important">Главная</a> · Контакты</div>
+      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(29px,4.2vw,45px);line-height:1.05;letter-spacing:-.022em;margin:0;color:#182A2B;max-width:780px">Оставьте заявку – подберём страну и рассчитаем бюджет</h1>
     </div>
   </section>
 
   <!-- FORM + INFO -->
-  <section id="lead" style="background:#FFFFFF;color:#211C15;padding:clamp(30px,3.5vw,46px) clamp(18px,4vw,40px) clamp(44px,6vw,72px)">
+  <section id="lead" style="background:#FFFFFF;color:#182A2B;padding:clamp(30px,3.5vw,46px) clamp(18px,4vw,40px) clamp(44px,6vw,72px)">
     <div style="max-width:1100px;margin:0 auto">
       <div id="ctaInner" style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,3.5vw,44px);align-items:stretch">
 
-        <div style="order:2;background:#FAF5EC;border:1px solid #EFE6D6;border-radius:14px;padding:clamp(24px,3vw,32px)">
-          <p style="font-size:16px;line-height:1.6;color:#6B6253;margin:0 0 22px">Ответим в течение рабочего дня. Консультация бесплатна и ни к чему не обязывает.</p>
-          <div style="display:flex;flex-direction:column;gap:13px;margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid #EADFCC">
-            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#3A332A"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>15 лет практики и юристы в 18 странах</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#3A332A"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>Фиксированная цена и возврат при отказе</div>
-            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#3A332A"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>Полное сопровождение на русском</div>
+        <div style="order:2;background:#EAF4F5;border:1px solid #D3E4E6;border-radius:14px;padding:clamp(24px,3vw,32px)">
+          <p style="font-size:16px;line-height:1.6;color:#50686C;margin:0 0 22px">Ответим в течение рабочего дня. Консультация бесплатна и ни к чему не обязывает.</p>
+          <div style="display:flex;flex-direction:column;gap:13px;margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid #D3E4E6">
+            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#2B4346"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>15 лет практики и юристы в 18 странах</div>
+            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#2B4346"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>Фиксированная цена и возврат при отказе</div>
+            <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#2B4346"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>Полное сопровождение на русском</div>
           </div>
 
-          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;color:#978C7B;margin-bottom:14px">Связаться напрямую</div>
+          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;color:#7A9296;margin-bottom:14px">Связаться напрямую</div>
           <div id="contactGrid" style="display:flex;flex-direction:column;gap:10px">
-            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #E8DECB;transition:border-color .2s,background .2s" style-hover="border-color:#BE7B3E !important;background:#FBF6EC !important"><span style="width:38px;height:38px;border-radius:10px;background:#F3E3CC;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.5a2 2 0 0 1-.6 1.9l-1.2 1.2a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 1.9-.5l2.5.5a2 2 0 0 1 1.7 2Z"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#978C7B;font-family:'Onest',sans-serif">Телефон</div><div style="font-size:14.5px;color:#211C15;font-family:'Onest',sans-serif;font-weight:500">8 903 217-46-58</div></div></a>
-            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #E8DECB;transition:border-color .2s,background .2s" style-hover="border-color:#BE7B3E !important;background:#FBF6EC !important"><span style="width:38px;height:38px;border-radius:10px;background:#F3E3CC;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7L22 6"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#978C7B;font-family:'Onest',sans-serif">Email</div><div style="font-size:14.5px;color:#211C15;font-family:'Onest',sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis">meridian.legal@gmail.com</div></div></a>
-            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #E8DECB;transition:border-color .2s,background .2s" style-hover="border-color:#BE7B3E !important;background:#FBF6EC !important"><span style="width:38px;height:38px;border-radius:10px;background:#F3E3CC;display:inline-flex;align-items:center;justify-content:center;flex:none"><span style="width:19px;height:19px;background-color:#A86A2E;-webkit-mask:url('images/telegram.png') center/contain no-repeat;mask:url('images/telegram.png') center/contain no-repeat;display:inline-block;flex:none"></span></span><div style="min-width:0"><div style="font-size:12px;color:#978C7B;font-family:'Onest',sans-serif">Telegram</div><div style="font-size:14.5px;color:#211C15;font-family:'Onest',sans-serif;font-weight:500">@meridian_legal</div></div></a>
-            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #E8DECB;transition:border-color .2s,background .2s" style-hover="border-color:#BE7B3E !important;background:#FBF6EC !important"><span style="width:38px;height:38px;border-radius:10px;background:#F3E3CC;display:inline-flex;align-items:center;justify-content:center;flex:none"><span style="width:20px;height:20px;background-color:#A86A2E;-webkit-mask:url('images/whatsapp.png') center/contain no-repeat;mask:url('images/whatsapp.png') center/contain no-repeat;display:inline-block;flex:none"></span></span><div style="min-width:0"><div style="font-size:12px;color:#978C7B;font-family:'Onest',sans-serif">WhatsApp</div><div style="font-size:14.5px;color:#211C15;font-family:'Onest',sans-serif;font-weight:500">8 903 217-46-58</div></div></a>
+            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.5a2 2 0 0 1-.6 1.9l-1.2 1.2a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 1.9-.5l2.5.5a2 2 0 0 1 1.7 2Z"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">Телефон</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500">8 903 217-46-58</div></div></a>
+            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7L22 6"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">Email</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis">meridian.legal@gmail.com</div></div></a>
+            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><span style="width:19px;height:19px;background-color:#0F4C5C;-webkit-mask:url('images/telegram.png') center/contain no-repeat;mask:url('images/telegram.png') center/contain no-repeat;display:inline-block;flex:none"></span></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">Telegram</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500">@meridian_legal</div></div></a>
+            <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><span style="width:20px;height:20px;background-color:#0F4C5C;-webkit-mask:url('images/whatsapp.png') center/contain no-repeat;mask:url('images/whatsapp.png') center/contain no-repeat;display:inline-block;flex:none"></span></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">WhatsApp</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500">8 903 217-46-58</div></div></a>
           </div>
         </div>
 
-        <div style="order:1;background:#fff;border:1px solid #E8DECB;border-radius:8px;padding:clamp(26px,3vw,38px)">
+        <div style="order:1;background:#fff;border:1px solid #D3E4E6;border-radius:8px;padding:clamp(26px,3vw,38px)">
           <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
             <div style="text-align:center;padding:24px 6px">
-              <span style="width:64px;height:64px;border-radius:50%;background:#EBDCC4;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A86A2E" stroke-width="1.8"><path d="M20 6 9 17l-5-5"></path></svg></span>
-              <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#211C15;margin:0 0 12px">Заявка принята</h3>
-              <p style="font-size:16px;color:#6E6456;line-height:1.6;margin:0 0 26px">{{ thanksName }}Свяжемся с вами в течение рабочего дня и предложим 2–3 подходящих маршрута.</p>
-              <button onClick="{{ again }}" style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:7px;background:none;border:1px solid #D8C4A4;color:#A86A2E;font-family:'Onest',sans-serif;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s" style-hover="background:#BE7B3E !important;color:#fff !important;border-color:#BE7B3E !important">Отправить ещё одну</button>
+              <span style="width:64px;height:64px;border-radius:50%;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#182A2B;margin:0 0 12px">Заявка принята</h3>
+              <p style="font-size:16px;color:#50686C;line-height:1.6;margin:0 0 26px">{{ thanksName }}Свяжемся с вами в течение рабочего дня и предложим 2–3 подходящих маршрута.</p>
+              <button onClick="{{ again }}" style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:7px;background:none;border:1px solid #B6D5DA;color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s" style-hover="background:#0F4C5C !important;color:#fff !important;border-color:#0F4C5C !important">Отправить ещё одну</button>
             </div>
           </sc-if>
           <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
             <form onSubmit="{{ onSubmit }}">
               <div style="margin-bottom:18px">
-                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#3A332A;margin-bottom:8px">Имя</label>
-                <input data-inp data-error="{{ nameErr }}" value="{{ nameVal }}" onChange="{{ onName }}" type="text" placeholder="Как к вам обращаться" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #E0D5C2;background:#fff;font-size:16px;color:#211C15;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#BE7B3E;box-shadow:0 0 0 3px rgba(190,123,62,.14)">
+                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#2B4346;margin-bottom:8px">Имя</label>
+                <input data-inp data-error="{{ nameErr }}" value="{{ nameVal }}" onChange="{{ onName }}" type="text" placeholder="Как к вам обращаться" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #CBDEE1;background:#fff;font-size:16px;color:#182A2B;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#0F4C5C;box-shadow:0 0 0 3px rgba(15,76,92,.14)">
                 <sc-if value="{{ nameErrBool }}" hint-placeholder-val="{{ false }}"><div style="color:#C0492E;font-size:13px;margin-top:6px;font-family:'Onest',sans-serif">Укажите, как к вам обращаться</div></sc-if>
               </div>
               <div style="margin-bottom:18px">
-                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#3A332A;margin-bottom:8px">Телефон или Telegram</label>
-                <input data-inp data-error="{{ contactErr }}" value="{{ contactVal }}" onChange="{{ onContact }}" type="text" placeholder="+7… или @username" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #E0D5C2;background:#fff;font-size:16px;color:#211C15;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#BE7B3E;box-shadow:0 0 0 3px rgba(190,123,62,.14)">
+                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#2B4346;margin-bottom:8px">Телефон или Telegram</label>
+                <input data-inp data-error="{{ contactErr }}" value="{{ contactVal }}" onChange="{{ onContact }}" type="text" placeholder="+7… или @username" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #CBDEE1;background:#fff;font-size:16px;color:#182A2B;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#0F4C5C;box-shadow:0 0 0 3px rgba(15,76,92,.14)">
                 <sc-if value="{{ contactErrBool }}" hint-placeholder-val="{{ false }}"><div style="color:#C0492E;font-size:13px;margin-top:6px;font-family:'Onest',sans-serif">Оставьте телефон или Telegram для связи</div></sc-if>
               </div>
               <div style="margin-bottom:18px">
-                <label style="display:block;font-weight:600;font-size:13.5px;color:#3A332A;margin-bottom:8px">Желаемая страна</label>
+                <label style="display:block;font-weight:600;font-size:13.5px;color:#2B4346;margin-bottom:8px">Желаемая страна</label>
                 <div style="position:relative">
                   <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}"><div onClick="{{ closeCountry }}" style="position:fixed;inset:0;z-index:40"></div></sc-if>
-                  <button type="button" onClick="{{ toggleCountry }}" data-open="{{ countryOpenStr }}" style="position:relative;z-index:41;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:6px;border:1px solid #E0D5C2;background:#fff;font-size:16px;color:{{ countryColor }};outline:none;cursor:pointer;text-align:left;transition:border-color .2s,box-shadow .2s" style-hover="border-color:#BE7B3E !important">
+                  <button type="button" onClick="{{ toggleCountry }}" data-open="{{ countryOpenStr }}" style="position:relative;z-index:41;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:6px;border:1px solid #CBDEE1;background:#fff;font-size:16px;color:{{ countryColor }};outline:none;cursor:pointer;text-align:left;transition:border-color .2s,box-shadow .2s" style-hover="border-color:#0F4C5C !important">
                     <span>{{ countryLabel }}</span>
                     <span class="csel-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></span>
                   </button>
                   <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}">
-                    <div style="position:absolute;z-index:42;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid #E6DAC6;border-radius:8px;box-shadow:0 18px 50px rgba(63,45,22,.18);padding:6px;max-height:300px;overflow:auto">
+                    <div style="position:absolute;z-index:42;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid #D3E4E6;border-radius:8px;box-shadow:0 18px 50px rgba(10,40,48,.18);padding:6px;max-height:300px;overflow:auto">
                       <button type="button" class="csel-opt" data-active="{{ actC0 }}" onClick="{{ selC0 }}"><span>Пока не определился(ась)</span><span class="csel-ck"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></span></button>
                       <button type="button" class="csel-opt" data-active="{{ actC1 }}" onClick="{{ selC1 }}"><span>Сербия</span><span class="csel-ck"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></span></button>
                       <button type="button" class="csel-opt" data-active="{{ actC2 }}" onClick="{{ selC2 }}"><span>Черногория</span><span class="csel-ck"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></span></button>
@@ -128,15 +128,15 @@
                 </div>
               </div>
               <div style="margin-bottom:18px">
-                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#3A332A;margin-bottom:8px">Ориентировочный бюджет</label>
-                <input type="text" placeholder="Например, до €50 000" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #E0D5C2;background:#fff;font-size:16px;color:#211C15;outline:none;font-family:'Onest',sans-serif;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#BE7B3E;box-shadow:0 0 0 3px rgba(190,123,62,.14)">
+                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#2B4346;margin-bottom:8px">Ориентировочный бюджет</label>
+                <input type="text" placeholder="Например, до €50 000" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #CBDEE1;background:#fff;font-size:16px;color:#182A2B;outline:none;font-family:'Onest',sans-serif;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#0F4C5C;box-shadow:0 0 0 3px rgba(15,76,92,.14)">
               </div>
               <div style="margin-bottom:24px">
-                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#3A332A;margin-bottom:8px">Кратко о вашей ситуации</label>
-                <textarea rows="3" placeholder="Цель переезда, состав семьи, желаемые сроки…" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #E0D5C2;background:#fff;font-size:16px;color:#211C15;outline:none;resize:vertical;min-height:82px;font-family:'Onest',sans-serif;line-height:1.5;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#BE7B3E;box-shadow:0 0 0 3px rgba(190,123,62,.14)"></textarea>
+                <label style="display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:13.5px;color:#2B4346;margin-bottom:8px">Кратко о вашей ситуации</label>
+                <textarea rows="3" placeholder="Цель переезда, состав семьи, желаемые сроки…" style="width:100%;padding:14px 16px;border-radius:8px;border:1px solid #CBDEE1;background:#fff;font-size:16px;color:#182A2B;outline:none;resize:vertical;min-height:82px;font-family:'Onest',sans-serif;line-height:1.5;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#0F4C5C;box-shadow:0 0 0 3px rgba(15,76,92,.14)"></textarea>
               </div>
-              <button type="submit" style="width:100%;padding:16px;border-radius:7px;background:#BE7B3E;color:#fff;border:none;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;cursor:pointer;transition:background .2s ease" style-hover="background:#1A140D !important;color:#fff !important">Отправить заявку</button>
-              <p style="font-size:12.5px;color:#928873;text-align:center;margin:16px 0 0;line-height:1.5;font-family:'Onest',sans-serif">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+              <button type="submit" style="width:100%;padding:16px;border-radius:7px;background:#0F4C5C;color:#fff;border:none;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;cursor:pointer;transition:background .2s ease" style-hover="background:#0E1416 !important;color:#fff !important">Отправить заявку</button>
+              <p style="font-size:12.5px;color:#7A9296;text-align:center;margin:16px 0 0;line-height:1.5;font-family:'Onest',sans-serif">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
             </form>
           </sc-if>
         </div>
@@ -146,27 +146,27 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" style="background:#FFFFFF;padding:clamp(38px,5vw,64px) clamp(18px,4vw,40px);border-top:1px solid #E9DECC">
+  <section id="faq" style="background:#FFFFFF;padding:clamp(38px,5vw,64px) clamp(18px,4vw,40px);border-top:1px solid #D3E4E6">
     <div style="max-width:880px;margin:0 auto">
       <div class="rev" style="text-align:center;margin-bottom:clamp(22px,3vw,34px)">
-        <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3.2vw,37px);line-height:1.1;letter-spacing:-.02em;color:#211C15;margin:0">Частые вопросы</h2>
+        <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3.2vw,37px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0">Частые вопросы</h2>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="background:#fff;border:1px solid #E8DFD0;border-radius:8px;overflow:hidden">
-          <button onClick="{{ tf0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#211C15;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Сколько это стоит?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq0Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D29354" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq0Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C8273" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
-          <sc-if value="{{ faq0Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #F0E8DA"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#6E6456">Зависит от страны и программы: от нескольких тысяч евро за ВНЖ по бизнесу до инвестиционных программ. На консультации называем точную сумму и фиксируем её в договоре – без доплат «в процессе».</p></div></sc-if>
+        <div style="background:#fff;border:1px solid #D3E4E6;border-radius:8px;overflow:hidden">
+          <button onClick="{{ tf0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#182A2B;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Сколько это стоит?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq0Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A8499" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq0Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#738B8F" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
+          <sc-if value="{{ faq0Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #E1EFF0"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#50686C">Зависит от страны и программы: от нескольких тысяч евро за ВНЖ по бизнесу до инвестиционных программ. На консультации называем точную сумму и фиксируем её в договоре – без доплат «в процессе».</p></div></sc-if>
         </div>
-        <div style="background:#fff;border:1px solid #E8DFD0;border-radius:8px;overflow:hidden">
-          <button onClick="{{ tf1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#211C15;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Какие гарантии?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq1Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D29354" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq1Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C8273" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
-          <sc-if value="{{ faq1Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #F0E8DA"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#6E6456">Фиксированная цена, прозрачный договор и возврат гонорара, если дело не прошло по нашей вине. Мы не обещаем «100% одобрения» – это обещают только мошенники. Мы отвечаем за качество подготовки и подачи.</p></div></sc-if>
+        <div style="background:#fff;border:1px solid #D3E4E6;border-radius:8px;overflow:hidden">
+          <button onClick="{{ tf1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#182A2B;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Какие гарантии?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq1Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A8499" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq1Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#738B8F" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
+          <sc-if value="{{ faq1Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #E1EFF0"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#50686C">Фиксированная цена, прозрачный договор и возврат гонорара, если дело не прошло по нашей вине. Мы не обещаем «100% одобрения» – это обещают только мошенники. Мы отвечаем за качество подготовки и подачи.</p></div></sc-if>
         </div>
-        <div style="background:#fff;border:1px solid #E8DFD0;border-radius:8px;overflow:hidden">
-          <button onClick="{{ tf2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#211C15;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Нужно ли ехать в страну?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq2Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D29354" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq2Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C8273" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
-          <sc-if value="{{ faq2Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #F0E8DA"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#6E6456">В большинстве программ – одна-две короткие поездки для биометрии и подписи. Часть стран допускает оформление по доверенности. Скажем заранее, как будет именно в вашем случае.</p></div></sc-if>
+        <div style="background:#fff;border:1px solid #D3E4E6;border-radius:8px;overflow:hidden">
+          <button onClick="{{ tf2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#182A2B;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Нужно ли ехать в страну?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq2Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A8499" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq2Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#738B8F" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
+          <sc-if value="{{ faq2Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #E1EFF0"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#50686C">В большинстве программ – одна-две короткие поездки для биометрии и подписи. Часть стран допускает оформление по доверенности. Скажем заранее, как будет именно в вашем случае.</p></div></sc-if>
         </div>
-        <div style="background:#fff;border:1px solid #E8DFD0;border-radius:8px;overflow:hidden">
-          <button onClick="{{ tf3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#211C15;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Что с банковскими счетами для россиян?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq3Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D29354" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq3Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C8273" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
-          <sc-if value="{{ faq3Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #F0E8DA"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#6E6456">Открываем счета там, где это реально сегодня, и готовим документы по источнику средств под требования банка. Подбираем юрисдикции с учётом санкционных ограничений и помогаем пройти комплаенс.</p></div></sc-if>
+        <div style="background:#fff;border:1px solid #D3E4E6;border-radius:8px;overflow:hidden">
+          <button onClick="{{ tf3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 26px;background:none;border:none;cursor:pointer;text-align:left;color:#182A2B;font-family:'Onest',sans-serif;font-weight:600;font-size:18px">Что с банковскими счетами для россиян?<span style="display:inline-flex;flex:none"><sc-if value="{{ faq3Open }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A8499" stroke-width="1.8"><path d="m6 15 6-6 6 6"></path></svg></sc-if><sc-if value="{{ faq3Closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#738B8F" stroke-width="1.8"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></button>
+          <sc-if value="{{ faq3Open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #E1EFF0"><p style="padding:18px 26px 24px;margin:0;font-size:16px;line-height:1.6;color:#50686C">Открываем счета там, где это реально сегодня, и готовим документы по источнику средств под требования банка. Подбираем юрисдикции с учётом санкционных ограничений и помогаем пройти комплаенс.</p></div></sc-if>
         </div>
       </div>
     </div>
@@ -211,7 +211,7 @@ class Component extends DCLogic {
       countryOpen: cOpen,
       countryOpenStr: cOpen ? 'true' : 'false',
       countryLabel: cv ? cv : 'Пока не определился(ась)',
-      countryColor: cv ? '#211C15' : '#8C8273',
+      countryColor: cv ? '#182A2B' : '#738B8F',
       toggleCountry: () => this.setState(s => ({ countryOpen: !s.countryOpen })),
       closeCountry: () => this.setState({ countryOpen:false }),
       selC0: () => this.pickCountry(''),

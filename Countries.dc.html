@@ -21,22 +21,22 @@
   h1,h2,h3{font-weight:600!important}
   .tlink{position:relative;transition:color .2s ease}
   .tlink::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-  .tlink:hover{color:#8A5524}
+  .tlink:hover{color:#0A3A46}
   .tlink:hover::after{transform:scaleX(1)}
   html{scroll-behavior:smooth;scroll-padding-top:90px}
-  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#211C15;line-height:1.6;-webkit-font-smoothing:antialiased}
-  ::selection{background:#BE7B3E;color:#fff}
+  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#182A2B;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:#0F4C5C;color:#fff}
   a{color:inherit;text-decoration:none}
   ::-webkit-scrollbar{width:11px;height:11px}
-  ::-webkit-scrollbar-track{background:#F3EAD9}
-  ::-webkit-scrollbar-thumb{background:#CFA06A;border-radius:10px;border:2px solid #F3EAD9}
-  ::-webkit-scrollbar-thumb:hover{background:#A86A2E}
-  html{scrollbar-width:thin;scrollbar-color:#CFA06A #F3EAD9}
+  ::-webkit-scrollbar-track{background:#DCEAEC}
+  ::-webkit-scrollbar-thumb{background:#4E97A6;border-radius:10px;border:2px solid #DCEAEC}
+  ::-webkit-scrollbar-thumb:hover{background:#0F4C5C}
+  html{scrollbar-width:thin;scrollbar-color:#4E97A6 #DCEAEC}
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
   .cntcard{flex:0 1 calc(33.333% - 12px);min-width:0}
   .cgrow{transition:background .2s ease}
-  .cgrow:hover{background:#F4DDB6}
+  .cgrow:hover{background:#CDE6E9}
   .tbl-scroll{-webkit-overflow-scrolling:touch}
   @media (max-width:1024px){.cntcard{flex-basis:calc(50% - 9px)}}
   @media (max-width:920px){#cmpSec{display:none}}
@@ -47,11 +47,11 @@
     .tbl-scroll table{min-width:0!important;display:block}
     .tbl-scroll thead{display:none}
     .tbl-scroll tbody{display:block}
-    .tbl-scroll tr{display:block;border:1px solid #E8DECB;border-radius:12px;background:#fff!important;padding:6px 18px 14px;margin-bottom:12px}
-    .tbl-scroll td{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:8px 0;border:none!important;font-size:14.5px;color:#3A332A;text-align:right}
-    .tbl-scroll td::before{content:attr(data-label);color:#928873;font-weight:600;font-size:12.5px;letter-spacing:.04em;text-align:left;flex:none}
-    .tbl-scroll td:first-child{display:block;font-size:20px;font-weight:700;color:#211C15;padding:12px 0 10px;border-bottom:1px solid #EFE6D6;margin-bottom:4px;text-align:left}
-    .tbl-scroll td:last-child{display:block;text-align:left;color:#6E6456;line-height:1.5;padding-top:10px}
+    .tbl-scroll tr{display:block;border:1px solid #D3E4E6;border-radius:12px;background:#fff!important;padding:6px 18px 14px;margin-bottom:12px}
+    .tbl-scroll td{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:8px 0;border:none!important;font-size:14.5px;color:#2B4346;text-align:right}
+    .tbl-scroll td::before{content:attr(data-label);color:#7A9296;font-weight:600;font-size:12.5px;letter-spacing:.04em;text-align:left;flex:none}
+    .tbl-scroll td:first-child{display:block;font-size:20px;font-weight:700;color:#182A2B;padding:12px 0 10px;border-bottom:1px solid #D3E4E6;margin-bottom:4px;text-align:left}
+    .tbl-scroll td:last-child{display:block;text-align:left;color:#50686C;line-height:1.5;padding-top:10px}
     .tbl-scroll td:last-child::before{display:block;margin-bottom:5px}
   }
 </style>
@@ -60,107 +60,107 @@
 <div style="background:#FFFFFF;font-family:'Onest',sans-serif;overflow-x:hidden">
   <dc-import name="Header" active="countries" hint-size="100%,70px"></dc-import>
 
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(80px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#182A2B;padding:clamp(80px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #D3E4E6">
     <div style="max-width:1240px;margin:0 auto">
-      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#978C7B;margin-bottom:26px"><a href="Home.dc.html" style="color:#A86A2E" style-hover="color:#8A5524 !important">Главная</a> · Страны</div>
-      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,46px);line-height:1.05;letter-spacing:-.022em;margin:0 0 20px;color:#211C15;max-width:780px">Куда переезжают граждане РФ – и что это даёт</h1>
-      <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.55;color:#6B6253;max-width:640px;margin:0">Работаем с 18 юрисдикциями. Ниже – основные направления со сроками, бюджетом и тем, что вы получаете. Цифры ориентировочны: точную программу подберём под вашу ситуацию.</p>
+      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#7A9296;margin-bottom:26px"><a href="Home.dc.html" style="color:#0F4C5C" style-hover="color:#0A3A46 !important">Главная</a> · Страны</div>
+      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,46px);line-height:1.05;letter-spacing:-.022em;margin:0 0 20px;color:#182A2B;max-width:780px">Куда переезжают граждане РФ – и что это даёт</h1>
+      <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.55;color:#50686C;max-width:640px;margin:0">Работаем с 18 юрисдикциями. Ниже – основные направления со сроками, бюджетом и тем, что вы получаете. Цифры ориентировочны: точную программу подберём под вашу ситуацию.</p>
     </div>
   </section>
 
   <section style="background:#FFFFFF;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
     <div style="max-width:1240px;margin:0 auto">
-      <h2 style="font-family:'Onest',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.02em;margin:0 0 34px;color:#211C15;max-width:680px">Популярные юрисдикции</h2>
+      <h2 style="font-family:'Onest',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.02em;margin:0 0 34px;color:#182A2B;max-width:680px">Популярные юрисдикции</h2>
       <div id="cntGrid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px">
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/serbia.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Балканы</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/serbia.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Балканы</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Сербия</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Сербия</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">1–2 месяца</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">€3 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">1–2 месяца</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">€3 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">ВНЖ по бизнесу или недвижимости. Путь к ПМЖ за 3 года и понятная стоимость входа.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Бизнес-ВНЖ</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Недвижимость</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">ВНЖ по бизнесу или недвижимости. Путь к ПМЖ за 3 года и понятная стоимость входа.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Бизнес-ВНЖ</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Недвижимость</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/montenegro.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Балканы</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/montenegro.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Балканы</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Черногория</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Черногория</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">1–3 месяца</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">€4 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">1–3 месяца</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">€4 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">ВНЖ по недвижимости. Кандидат в ЕС, мягкий климат и низкая налоговая нагрузка.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Недвижимость</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Бизнес-ВНЖ</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">ВНЖ по недвижимости. Кандидат в ЕС, мягкий климат и низкая налоговая нагрузка.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Недвижимость</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Бизнес-ВНЖ</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/hungary.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евросоюз</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/hungary.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евросоюз</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Венгрия</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Венгрия</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">2–4 месяца</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">€250 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">2–4 месяца</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">€250 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">ВНЖ гостя-инвестора. Полноценное резидентство в ЕС и свобода Шенгена.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">ВНЖ инвестора</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">ЕС / Шенген</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">ВНЖ гостя-инвестора. Полноценное резидентство в ЕС и свобода Шенгена.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">ВНЖ инвестора</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">ЕС / Шенген</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/spain.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евросоюз</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/spain.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евросоюз</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Испания</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Испания</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">2–4 месяца</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">€60 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">2–4 месяца</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">€60 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">Виза цифрового кочевника или ВНЖ без права на работу. Жизнь в ЕС и Шенген.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Кочевник</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">ВНЖ без работы</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">Виза цифрового кочевника или ВНЖ без права на работу. Жизнь в ЕС и Шенген.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Кочевник</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">ВНЖ без работы</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/turkey.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евразия</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/turkey.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Евразия</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Турция</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Турция</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">3–6 месяцев</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">$400 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">3–6 месяцев</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">$400 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">Гражданство за недвижимость. Паспорт для всей семьи за 4–6 месяцев.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Гражданство</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Недвижимость</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">Гражданство за недвижимость. Паспорт для всей семьи за 4–6 месяцев.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Гражданство</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Недвижимость</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/uae.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Залив</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/uae.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Залив</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">ОАЭ</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">ОАЭ</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">2–6 недель</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">$5 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">2–6 недель</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">$5 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">Резидентская виза на 2–10 лет и ноль налога на личный доход. Быстрый старт.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Резид. виза</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Бизнес</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">Резидентская виза на 2–10 лет и ноль налога на личный доход. Быстрый старт.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Резид. виза</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Бизнес</span></div>
           </div>
         </div>
 
-        <div class="rev cntcard" style="background:#fff;border:1px solid #E8DECB;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#D9B98A !important;background:#FBF6EC !important">
-          <div style="height:140px;background:url('images/thailand.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.34),rgba(20,15,9,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#F6EFE3;background:rgba(20,15,9,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Азия</span></div>
+        <div class="rev cntcard" style="background:#fff;border:1px solid #D3E4E6;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,background .25s" style-hover="border-color:#A5CDD4 !important;background:#E0F0F2 !important">
+          <div style="height:140px;background:url('images/thailand.jpg') center 42%/cover;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,24,.34),rgba(15,22,24,0) 58%);pointer-events:none"></div><span style="position:absolute;top:12px;left:12px;font-family:'Onest',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;color:#EAF4F5;background:rgba(15,22,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:5px 11px;border-radius:7px">Азия</span></div>
           <div style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#211C15;margin:0 0 16px">Таиланд</h3>
+            <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#182A2B;margin:0 0 16px">Таиланд</h3>
             <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Срок</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">3–6 недель</span></div>
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#928873">Бюджет от</span><span style="color:#211C15;font-weight:500;font-family:'Onest',sans-serif">$15 000</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Срок</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">3–6 недель</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:#7A9296">Бюджет от</span><span style="color:#182A2B;font-weight:500;font-family:'Onest',sans-serif">$15 000</span></div>
             </div>
-            <div style="border-top:1px solid #EFE6D6;margin-top:16px;padding-top:14px;color:#6E6456;line-height:1.5;font-size:14.5px;flex:1">Виза Elite до 20 лет. Долгое проживание без визаранов и постоянных продлений.</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Виза Elite</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#A86A2E;background:#F7ECDD;padding:5px 10px;border-radius:7px">Долгосрочно</span></div>
+            <div style="border-top:1px solid #D3E4E6;margin-top:16px;padding-top:14px;color:#50686C;line-height:1.5;font-size:14.5px;flex:1">Виза Elite до 20 лет. Долгое проживание без визаранов и постоянных продлений.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px"><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Виза Elite</span><span style="font-family:'Onest',sans-serif;font-size:12px;color:#0F4C5C;background:#DCEEF0;padding:5px 10px;border-radius:7px">Долгосрочно</span></div>
           </div>
         </div>
 
@@ -168,71 +168,71 @@
     </div>
   </section>
 
-  <section id="cmpSec" style="background:#FAF6EE;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
+  <section id="cmpSec" style="background:#EAF4F5;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
     <div style="max-width:1240px;margin:0 auto">
-      <h2 style="font-family:'Onest',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.02em;margin:0 0 8px;color:#211C15;max-width:680px">Страны одним списком</h2>
-      <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.55;color:#6B6253;max-width:620px;margin:0 0 34px">Срок, минимальный бюджет и что вы получаете на выходе по каждому направлению.</p>
+      <h2 style="font-family:'Onest',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.02em;margin:0 0 8px;color:#182A2B;max-width:680px">Страны одним списком</h2>
+      <p style="font-size:clamp(15px,1.5vw,17px);line-height:1.55;color:#50686C;max-width:620px;margin:0 0 34px">Срок, минимальный бюджет и что вы получаете на выходе по каждому направлению.</p>
 
-      <div class="tbl-scroll" style="overflow-x:auto;border:1px solid #E8DECB;border-radius:10px">
+      <div class="tbl-scroll" style="overflow-x:auto;border:1px solid #D3E4E6;border-radius:10px">
         <table style="width:100%;border-collapse:collapse;font-family:'Onest',sans-serif;min-width:720px">
           <thead>
             <tr style="text-align:left">
-              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#978C7B;border-bottom:1px solid #E8DECB">Страна</th>
-              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#978C7B;border-bottom:1px solid #E8DECB">Регион</th>
-              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#978C7B;border-bottom:1px solid #E8DECB">Срок</th>
-              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#978C7B;border-bottom:1px solid #E8DECB">Бюджет от</th>
-              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#978C7B;border-bottom:1px solid #E8DECB">Что даёт</th>
+              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#7A9296;border-bottom:1px solid #D3E4E6">Страна</th>
+              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#7A9296;border-bottom:1px solid #D3E4E6">Регион</th>
+              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#7A9296;border-bottom:1px solid #D3E4E6">Срок</th>
+              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#7A9296;border-bottom:1px solid #D3E4E6">Бюджет от</th>
+              <th style="padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#7A9296;border-bottom:1px solid #D3E4E6">Что даёт</th>
             </tr>
           </thead>
           <tbody>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">Сербия</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Балканы</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">1–2 месяца</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">€3 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">ВНЖ по бизнесу или недвижимости. Путь к ПМЖ за 3 года и понятная стоимость входа.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">Сербия</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Балканы</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">1–2 месяца</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">€3 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">ВНЖ по бизнесу или недвижимости. Путь к ПМЖ за 3 года и понятная стоимость входа.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">Черногория</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Балканы</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">1–3 месяца</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">€4 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">ВНЖ по недвижимости. Кандидат в ЕС, мягкий климат и низкая налоговая нагрузка.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">Черногория</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Балканы</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">1–3 месяца</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">€4 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">ВНЖ по недвижимости. Кандидат в ЕС, мягкий климат и низкая налоговая нагрузка.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">Венгрия</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Евросоюз</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">2–4 месяца</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">€250 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">ВНЖ гостя-инвестора. Полноценное резидентство в ЕС и свобода Шенгена.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">Венгрия</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Евросоюз</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">2–4 месяца</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">€250 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">ВНЖ гостя-инвестора. Полноценное резидентство в ЕС и свобода Шенгена.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">Испания</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Евросоюз</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">2–4 месяца</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">€60 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Виза цифрового кочевника или ВНЖ без права на работу. Жизнь в ЕС и Шенген.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">Испания</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Евросоюз</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">2–4 месяца</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">€60 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Виза цифрового кочевника или ВНЖ без права на работу. Жизнь в ЕС и Шенген.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">Турция</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Евразия</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">3–6 месяцев</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">$400 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Гражданство за недвижимость. Паспорт для всей семьи за 4–6 месяцев.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">Турция</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Евразия</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">3–6 месяцев</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">$400 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Гражданство за недвижимость. Паспорт для всей семьи за 4–6 месяцев.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15;border-bottom:1px solid #EFE6D6">ОАЭ</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Залив</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">2–6 недель</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">$5 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253;border-bottom:1px solid #EFE6D6">Резидентская виза на 2–10 лет и ноль налога на личный доход. Быстрый старт.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B;border-bottom:1px solid #D3E4E6">ОАЭ</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Залив</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">2–6 недель</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">$5 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C;border-bottom:1px solid #D3E4E6">Резидентская виза на 2–10 лет и ноль налога на личный доход. Быстрый старт.</td>
             </tr>
             <tr class="cgrow" style="background:#fff">
-              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#211C15">Таиланд</td>
-              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#6B6253">Азия</td>
-              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#6B6253">3–6 недель</td>
-              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#6B6253">$15 000</td>
-              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#6B6253">Виза Elite до 20 лет. Долгое проживание без визаранов и постоянных продлений.</td>
+              <td style="padding:16px 22px;font-size:15px;font-weight:600;color:#182A2B">Таиланд</td>
+              <td data-label="Регион" style="padding:16px 22px;font-size:14.5px;color:#50686C">Азия</td>
+              <td data-label="Срок" style="padding:16px 22px;font-size:14.5px;color:#50686C">3–6 недель</td>
+              <td data-label="Бюджет от" style="padding:16px 22px;font-size:14.5px;color:#50686C">$15 000</td>
+              <td data-label="Что даёт" style="padding:16px 22px;font-size:14.5px;color:#50686C">Виза Elite до 20 лет. Долгое проживание без визаранов и постоянных продлений.</td>
             </tr>
           </tbody>
         </table>
@@ -240,11 +240,11 @@
     </div>
   </section>
 
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px);border-top:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#182A2B;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px);border-top:1px solid #D3E4E6">
     <div style="max-width:920px;margin:0 auto;text-align:center">
-      <h2 class="rev" style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:#211C15;margin:0 0 16px">Не нашли свою страну?</h2>
-      <p class="rev" style="font-size:clamp(16px,1.6vw,19px);color:#6B6253;max-width:540px;margin:0 auto 30px;line-height:1.6">Мы работаем с 18 юрисдикциями. Расскажите о цели и бюджете – подберём вариант под вас.</p>
-      <a href="Contacts.dc.html" class="rev" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:7px;background:#BE7B3E;color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;transition:background .2s ease" style-hover="background:#1A140D !important;color:#fff !important">Подобрать страну</a>
+      <h2 class="rev" style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0 0 16px">Не нашли свою страну?</h2>
+      <p class="rev" style="font-size:clamp(16px,1.6vw,19px);color:#50686C;max-width:540px;margin:0 auto 30px;line-height:1.6">Мы работаем с 18 юрисдикциями. Расскажите о цели и бюджете – подберём вариант под вас.</p>
+      <a href="Contacts.dc.html" class="rev" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:7px;background:#0F4C5C;color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;transition:background .2s ease" style-hover="background:#0E1416 !important;color:#fff !important">Подобрать страну</a>
     </div>
   </section>
 

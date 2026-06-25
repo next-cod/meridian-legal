@@ -9,15 +9,15 @@
 <x-dc>
 <helmet>
 <style>
-  [data-nav]{position:relative;color:#C8BFB0;transition:color .22s ease}
-  [data-nav]::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:#D29354;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-  [data-nav]:hover{color:#F3EDE3}
+  [data-nav]{position:relative;color:#AEC8CC;transition:color .22s ease}
+  [data-nav]::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:#2A8499;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  [data-nav]:hover{color:#EAF4F5}
   [data-nav]:hover::after{transform:scaleX(1)}
-  [data-nav][data-active="true"]{color:#F3EDE3!important}
+  [data-nav][data-active="true"]{color:#EAF4F5!important}
   [data-nav][data-active="true"]::after{transform:scaleX(1)}
   #hdrMobile{display:none}
   #hdrBurger{display:none}
-  header[data-scrolled="true"]{background:#120F0A!important;border-bottom-color:rgba(244,238,227,0.12)!important;box-shadow:0 10px 36px rgba(0,0,0,0.30)!important}
+  header[data-scrolled="true"]{background:#0E1416!important;border-bottom-color:rgba(225,240,242,0.12)!important;box-shadow:0 10px 36px rgba(0,0,0,0.30)!important}
   @media (max-width:860px){
     #hdrDeskNav,#hdrCta{display:none!important}
     #hdrBurger{display:inline-flex!important}
@@ -25,13 +25,13 @@
   }
 </style>
 </helmet>
-<header data-scrolled="{{ scrolledStr }}" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#16110B;border-bottom:1px solid rgba(244,238,227,0.08);transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;font-family:'Onest',sans-serif">
+<header data-scrolled="{{ scrolledStr }}" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#12181A;border-bottom:1px solid rgba(225,240,242,0.08);transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;font-family:'Onest',sans-serif">
   <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px);height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="Home.dc.html" style="display:flex;align-items:center;gap:12px">
-      <span style="width:33px;height:33px;border-radius:50%;border:1.5px solid #BE7B3E;display:inline-flex;align-items:center;justify-content:center;flex:none">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#D29354" stroke-width="1.4"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9Z"></path></svg>
+      <span style="width:33px;height:33px;border-radius:50%;border:1.5px solid #0F4C5C;display:inline-flex;align-items:center;justify-content:center;flex:none">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2A8499" stroke-width="1.4"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9Z"></path></svg>
       </span>
-      <span style="font-weight:700;font-size:18px;letter-spacing:.20em;color:#F3EDE3">МЕРИДИАН</span>
+      <span style="font-weight:700;font-size:18px;letter-spacing:.20em;color:#EAF4F5">МЕРИДИАН</span>
     </a>
 
     <nav id="hdrDeskNav" style="display:flex;align-items:center;gap:30px;font-weight:500;font-size:14.5px">
@@ -42,21 +42,21 @@
       <a data-nav data-active="{{ aContacts }}" href="Contacts.dc.html">Контакты</a>
     </nav>
 
-    <a id="hdrCta" href="Contacts.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:7px;background:#BE7B3E;color:#fff;font-weight:600;font-size:14px;transition:background .2s ease,color .2s ease" style-hover="background:#fff !important;color:#1A140D !important">Бесплатная консультация</a>
+    <a id="hdrCta" href="Contacts.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:7px;background:#0F4C5C;color:#fff;font-weight:600;font-size:14px;transition:background .2s ease,color .2s ease" style-hover="background:#fff !important;color:#0E1416 !important">Бесплатная консультация</a>
 
-    <button id="hdrBurger" onClick="{{ toggleMenu }}" aria-label="Меню" style="display:none;width:42px;height:42px;border-radius:8px;border:1px solid rgba(244,238,227,.18);background:rgba(244,238,227,.04);color:#F3EDE3;cursor:pointer;align-items:center;justify-content:center" style-hover="background:rgba(190,123,62,.20) !important;border-color:#BE7B3E !important;color:#D29354 !important">
+    <button id="hdrBurger" onClick="{{ toggleMenu }}" aria-label="Меню" style="display:none;width:42px;height:42px;border-radius:8px;border:1px solid rgba(225,240,242,.18);background:rgba(225,240,242,.04);color:#EAF4F5;cursor:pointer;align-items:center;justify-content:center" style-hover="background:rgba(15,76,92,.20) !important;border-color:#0F4C5C !important;color:#2A8499 !important">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
     </button>
   </div>
 
-  <div id="hdrMobile" data-open="{{ menuOpenStr }}" style="flex-direction:column;padding:8px 22px 22px;gap:2px;background:rgba(17,14,9,0.99);border-top:1px solid rgba(244,238,227,.08)">
-    <a href="Home.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px;border-bottom:1px solid rgba(244,238,227,.07)">Главная</a>
-    <a href="Services.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px;border-bottom:1px solid rgba(244,238,227,.07)">Услуги</a>
-    <a href="Countries.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px;border-bottom:1px solid rgba(244,238,227,.07)">Страны</a>
-    <a href="Process.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px;border-bottom:1px solid rgba(244,238,227,.07)">Как мы работаем</a>
-    <a href="Cases.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px;border-bottom:1px solid rgba(244,238,227,.07)">Кейсы</a>
-    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#E7DFD2;font-size:16px">Контакты</a>
-    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="margin-top:14px;text-align:center;padding:14px;border-radius:7px;background:#BE7B3E;color:#fff;font-weight:600" style-hover="background:#fff !important;color:#1A140D !important">Бесплатная консультация</a>
+  <div id="hdrMobile" data-open="{{ menuOpenStr }}" style="flex-direction:column;padding:8px 22px 22px;gap:2px;background:rgba(14,20,22,0.99);border-top:1px solid rgba(225,240,242,.08)">
+    <a href="Home.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Главная</a>
+    <a href="Services.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Услуги</a>
+    <a href="Countries.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Страны</a>
+    <a href="Process.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Как мы работаем</a>
+    <a href="Cases.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Кейсы</a>
+    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px">Контакты</a>
+    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="margin-top:14px;text-align:center;padding:14px;border-radius:7px;background:#0F4C5C;color:#fff;font-weight:600" style-hover="background:#fff !important;color:#0E1416 !important">Бесплатная консультация</a>
   </div>
 </header>
 </x-dc>

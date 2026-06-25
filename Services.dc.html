@@ -21,17 +21,17 @@
   h1,h2,h3{font-weight:600!important}
   .tlink{position:relative;transition:color .2s ease}
   .tlink::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-  .tlink:hover{color:#8A5524}
+  .tlink:hover{color:#0A3A46}
   .tlink:hover::after{transform:scaleX(1)}
   html{scroll-behavior:smooth;scroll-padding-top:90px}
-  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#211C15;line-height:1.6;-webkit-font-smoothing:antialiased}
-  ::selection{background:#BE7B3E;color:#fff}
+  body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#182A2B;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:#0F4C5C;color:#fff}
   a{color:inherit;text-decoration:none}
   ::-webkit-scrollbar{width:11px;height:11px}
-  ::-webkit-scrollbar-track{background:#F3EAD9}
-  ::-webkit-scrollbar-thumb{background:#CFA06A;border-radius:10px;border:2px solid #F3EAD9}
-  ::-webkit-scrollbar-thumb:hover{background:#A86A2E}
-  html{scrollbar-width:thin;scrollbar-color:#CFA06A #F3EAD9}
+  ::-webkit-scrollbar-track{background:#DCEAEC}
+  ::-webkit-scrollbar-thumb{background:#4E97A6;border-radius:10px;border:2px solid #DCEAEC}
+  ::-webkit-scrollbar-thumb:hover{background:#0F4C5C}
+  html{scrollbar-width:thin;scrollbar-color:#4E97A6 #DCEAEC}
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
   @media (max-width:720px){[data-svc-inner]{grid-template-columns:1fr!important}}
@@ -42,23 +42,23 @@
   <dc-import name="Header" active="services" hint-size="100%,70px"></dc-import>
 
   <!-- PAGE HERO -->
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(80px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#182A2B;padding:clamp(80px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #D3E4E6">
     <div style="max-width:1240px;margin:0 auto">
-      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#978C7B;margin-bottom:26px"><a href="Home.dc.html" style="color:#A86A2E" style-hover="color:#8A5524 !important">Главная</a> · Услуги</div>
-      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,46px);line-height:1.05;letter-spacing:-.022em;margin:0 0 20px;color:#211C15;max-width:760px">Шесть путей к легальному статусу за рубежом</h1>
-      <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.55;color:#6B6253;max-width:620px;margin:0">Мы не продаём «универсальную программу». Сначала разбираем цель, бюджет и ситуацию с документами – и только потом предлагаем маршрут. Ниже – что входит в каждую услугу.</p>
+      <div style="font-family:'Onest',sans-serif;font-size:13px;color:#7A9296;margin-bottom:26px"><a href="Home.dc.html" style="color:#0F4C5C" style-hover="color:#0A3A46 !important">Главная</a> · Услуги</div>
+      <h1 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,46px);line-height:1.05;letter-spacing:-.022em;margin:0 0 20px;color:#182A2B;max-width:760px">Шесть путей к легальному статусу за рубежом</h1>
+      <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.55;color:#50686C;max-width:620px;margin:0">Мы не продаём «универсальную программу». Сначала разбираем цель, бюджет и ситуацию с документами – и только потом предлагаем маршрут. Ниже – что входит в каждую услугу.</p>
     </div>
   </section>
 
   <!-- SERVICES — editorial numbered list, hairline-separated (no repeated cards) -->
   <style>
     .svc-row{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,3.4vw,52px);align-items:start}
-    .svc-num{font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(40px,5.2vw,68px);line-height:.9;color:#BBAB90;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+    .svc-num{font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(40px,5.2vw,68px);line-height:.9;color:#93B4BA;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
     .svc-body{display:grid;grid-template-columns:1.45fr .9fr;gap:clamp(24px,3vw,44px)}
     .svc-incl{display:flex;flex-direction:column;gap:11px}
-    .svc-li{display:flex;gap:11px;font-size:15.5px;color:#3A332A;line-height:1.5}
+    .svc-li{display:flex;gap:11px;font-size:15.5px;color:#2B4346;line-height:1.5}
     .svc-meta{display:flex;flex-direction:column}
-    .svc-meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-top:1px solid #E9DECC;font-size:14.5px}
+    .svc-meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-top:1px solid #D3E4E6;font-size:14.5px}
     @media (max-width:860px){
       .svc-body{grid-template-columns:1fr}
       .svc-row{grid-template-columns:1fr;gap:14px}
@@ -69,7 +69,7 @@
   </style>
 
   <!-- SERVICES GROUP A — статусы и визы (cream) -->
-  <section style="background:#FAF6EE;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
+  <section style="background:#EAF4F5;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
     <div style="max-width:1140px;margin:0 auto">
 
       <!-- group eyebrow -->
@@ -80,79 +80,79 @@
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">ВНЖ за инвестиции</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">ВНЖ за инвестиции</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 26px;line-height:1.55;max-width:600px">Резидентство через покупку недвижимости или вклад. Самый понятный путь к легальной базе в новой стране.</p>
+          <p style="font-size:16px;color:#50686C;margin:0 0 26px;line-height:1.55;max-width:600px">Резидентство через покупку недвижимости или вклад. Самый понятный путь к легальной базе в новой стране.</p>
           <div class="svc-body">
             <div>
-              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
               <div class="svc-incl">
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подбор программы под бюджет и цель</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Юридическая проверка объекта или вклада</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подготовка, перевод и легализация документов</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и сопровождение до карты резидента</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подбор программы под бюджет и цель</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Юридическая проверка объекта или вклада</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подготовка, перевод и легализация документов</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и сопровождение до карты резидента</div>
               </div>
             </div>
             <div class="svc-meta">
-              <div class="svc-meta-row"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">1–4 месяца</span></div>
-              <div class="svc-meta-row"><span style="color:#928873">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">€3 000</span></div>
-              <div style="padding-top:12px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> нужен легальный статус и база с понятным бюджетом.</div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">1–4 месяца</span></div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">€3 000</span></div>
+              <div style="padding-top:12px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> нужен легальный статус и база с понятным бюджетом.</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- 2 — editorial numbered row -->
-      <div class="rev svc-row" style="padding:clamp(24px,3.5vw,52px) 0;border-top:1px solid #E9DECC">
+      <div class="rev svc-row" style="padding:clamp(24px,3.5vw,52px) 0;border-top:1px solid #D3E4E6">
         <div class="svc-num">02</div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">Виза цифрового кочевника</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">Виза цифрового кочевника</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 26px;line-height:1.55;max-width:600px">Легальное проживание для тех, кто работает удалённо – без привязки к местному работодателю.</p>
+          <p style="font-size:16px;color:#50686C;margin:0 0 26px;line-height:1.55;max-width:600px">Легальное проживание для тех, кто работает удалённо – без привязки к местному работодателю.</p>
           <div class="svc-body">
             <div>
-              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
               <div class="svc-incl">
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Проверка соответствия требованиям визы</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подтверждение дохода и оформление справок</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Заполнение анкет и подача заявления</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Помощь с продлением и налоговым статусом</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Проверка соответствия требованиям визы</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подтверждение дохода и оформление справок</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Заполнение анкет и подача заявления</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Помощь с продлением и налоговым статусом</div>
               </div>
             </div>
             <div class="svc-meta">
-              <div class="svc-meta-row"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">1–3 месяца</span></div>
-              <div class="svc-meta-row"><span style="color:#928873">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">€1 500</span></div>
-              <div style="padding-top:12px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> удалёнщикам и фрилансерам с доходом из-за рубежа.</div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">1–3 месяца</span></div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">€1 500</span></div>
+              <div style="padding-top:12px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> удалёнщикам и фрилансерам с доходом из-за рубежа.</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- 3 — editorial numbered row -->
-      <div class="rev svc-row" style="padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #E9DECC">
+      <div class="rev svc-row" style="padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #D3E4E6">
         <div class="svc-num">03</div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">Гражданство за инвестиции</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">Гражданство за инвестиции</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 26px;line-height:1.55;max-width:600px">Второй паспорт за 6–14 месяцев. Свобода передвижения и защита активов в стабильной юрисдикции.</p>
+          <p style="font-size:16px;color:#50686C;margin:0 0 26px;line-height:1.55;max-width:600px">Второй паспорт за 6–14 месяцев. Свобода передвижения и защита активов в стабильной юрисдикции.</p>
           <div class="svc-body">
             <div>
-              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+              <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
               <div class="svc-incl">
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Выбор юрисдикции под ваши цели</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подготовка к due diligence и проверке</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Сопровождение инвестиции и сделки</div>
-                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и получение паспорта</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Выбор юрисдикции под ваши цели</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подготовка к due diligence и проверке</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Сопровождение инвестиции и сделки</div>
+                <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и получение паспорта</div>
               </div>
             </div>
             <div class="svc-meta">
-              <div class="svc-meta-row"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">6–14 месяцев</span></div>
-              <div class="svc-meta-row"><span style="color:#928873">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">$200 000</span></div>
-              <div style="padding-top:12px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> нужен второй паспорт и свобода передвижения.</div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">6–14 месяцев</span></div>
+              <div class="svc-meta-row"><span style="color:#7A9296">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">$200 000</span></div>
+              <div style="padding-top:12px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> нужен второй паспорт и свобода передвижения.</div>
             </div>
           </div>
         </div>
@@ -170,71 +170,71 @@
       <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:stretch;padding-bottom:clamp(24px,3.5vw,52px)">
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
-            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#BE7B3E;letter-spacing:.08em">04</span>
+            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#0F4C5C;letter-spacing:.08em">04</span>
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">Бизнес-иммиграция</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">Бизнес-иммиграция</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 22px;line-height:1.55;max-width:520px">Регистрация компании и ВНЖ для предпринимателей. Структура, которая выдерживает проверку.</p>
-          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+          <p style="font-size:16px;color:#50686C;margin:0 0 22px;line-height:1.55;max-width:520px">Регистрация компании и ВНЖ для предпринимателей. Структура, которая выдерживает проверку.</p>
+          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
           <div class="svc-incl">
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Регистрация компании и выбор формы</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Структура владения и налоговая логика</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>ВНЖ учредителя и ключевых сотрудников</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Бухгалтерское сопровождение на старте</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Регистрация компании и выбор формы</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Структура владения и налоговая логика</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>ВНЖ учредителя и ключевых сотрудников</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Бухгалтерское сопровождение на старте</div>
           </div>
         </div>
-        <div style="background:#FAF6EE;border:1px solid #EFE6D6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
-          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">1–3 месяца</span></div>
-          <div class="svc-meta-row"><span style="color:#928873">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">€5 000</span></div>
-          <div style="padding-top:14px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> предпринимателям и инвесторам.</div>
+        <div style="background:#EAF4F5;border:1px solid #D3E4E6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
+          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">1–3 месяца</span></div>
+          <div class="svc-meta-row"><span style="color:#7A9296">Бюджет от</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">€5 000</span></div>
+          <div style="padding-top:14px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> предпринимателям и инвесторам.</div>
         </div>
       </div>
 
       <!-- 5 — alternating media row REVERSED: tinted panel left, text right -->
-      <div class="rev svc-rev svc-altrow" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:stretch;padding:clamp(24px,3.5vw,52px) 0;border-top:1px solid #E9DECC">
-        <div class="svc-panel" style="background:#FAF6EE;border:1px solid #EFE6D6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
-          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">2–5 месяцев</span></div>
-          <div class="svc-meta-row"><span style="color:#928873">Бюджет</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">индивидуально</span></div>
-          <div style="padding-top:14px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> тем, кто уже получил статус и перевозит близких.</div>
+      <div class="rev svc-rev svc-altrow" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:stretch;padding:clamp(24px,3.5vw,52px) 0;border-top:1px solid #D3E4E6">
+        <div class="svc-panel" style="background:#EAF4F5;border:1px solid #D3E4E6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
+          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">2–5 месяцев</span></div>
+          <div class="svc-meta-row"><span style="color:#7A9296">Бюджет</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">индивидуально</span></div>
+          <div style="padding-top:14px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> тем, кто уже получил статус и перевозит близких.</div>
         </div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
-            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#BE7B3E;letter-spacing:.08em">05</span>
+            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#0F4C5C;letter-spacing:.08em">05</span>
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">Воссоединение семьи</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">Воссоединение семьи</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 22px;line-height:1.55;max-width:520px">Перевозим супругов, детей и родителей. Ведём каждого члена семьи до его карты резидента.</p>
-          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+          <p style="font-size:16px;color:#50686C;margin:0 0 22px;line-height:1.55;max-width:520px">Перевозим супругов, детей и родителей. Ведём каждого члена семьи до его карты резидента.</p>
+          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
           <div class="svc-incl">
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Оценка оснований для воссоединения</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Сбор и перевод документов на каждого</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и сопровождение заявлений</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Помощь с адаптацией на месте</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Оценка оснований для воссоединения</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Сбор и перевод документов на каждого</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Подача и сопровождение заявлений</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Помощь с адаптацией на месте</div>
           </div>
         </div>
       </div>
 
       <!-- 6 — alternating media row: text left, tinted panel right -->
-      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:stretch;padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #E9DECC">
+      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:stretch;padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #D3E4E6">
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
-            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#BE7B3E;letter-spacing:.08em">06</span>
+            <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#0F4C5C;letter-spacing:.08em">06</span>
             
-            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#211C15;margin:0;letter-spacing:-.01em">Сопровождение «под ключ»</h2>
+            <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,28px);color:#182A2B;margin:0;letter-spacing:-.01em">Сопровождение «под ключ»</h2>
           </div>
-          <p style="font-size:16px;color:#6E6456;margin:0 0 22px;line-height:1.55;max-width:520px">Максимум результата при минимуме вашего участия. Берём на себя весь процесс – от стратегии до жизни на месте.</p>
-          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#A86A2E;margin-bottom:14px">Что входит</div>
+          <p style="font-size:16px;color:#50686C;margin:0 0 22px;line-height:1.55;max-width:520px">Максимум результата при минимуме вашего участия. Берём на себя весь процесс – от стратегии до жизни на месте.</p>
+          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;color:#0F4C5C;margin-bottom:14px">Что входит</div>
           <div class="svc-incl">
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Стратегия и подбор страны</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Перевод, легализация и подача документов</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Открытие счёта и страховка</div>
-            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE7B3E" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Первые шаги на новом месте</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Стратегия и подбор страны</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Перевод, легализация и подача документов</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Открытие счёта и страховка</div>
+            <div class="svc-li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.8" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Первые шаги на новом месте</div>
           </div>
         </div>
-        <div style="background:#FAF6EE;border:1px solid #EFE6D6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
-          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">индивидуально</span></div>
-          <div class="svc-meta-row"><span style="color:#928873">Цена</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">фиксированная</span></div>
-          <div style="padding-top:14px;font-size:14px;color:#6E6456;line-height:1.5;border-top:1px solid #E9DECC;margin-top:11px"><span style="color:#928873">Кому:</span> тем, кто хочет переехать с минимумом хлопот.</div>
+        <div style="background:#EAF4F5;border:1px solid #D3E4E6;border-radius:10px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;justify-content:center">
+          <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#7A9296">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">индивидуально</span></div>
+          <div class="svc-meta-row"><span style="color:#7A9296">Цена</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#182A2B">фиксированная</span></div>
+          <div style="padding-top:14px;font-size:14px;color:#50686C;line-height:1.5;border-top:1px solid #D3E4E6;margin-top:11px"><span style="color:#7A9296">Кому:</span> тем, кто хочет переехать с минимумом хлопот.</div>
         </div>
       </div>
 
@@ -242,11 +242,11 @@
   </section>
 
   <!-- CTA BAND -->
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(38px,5vw,62px) clamp(18px,4vw,40px);border-top:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#182A2B;padding:clamp(38px,5vw,62px) clamp(18px,4vw,40px);border-top:1px solid #D3E4E6">
     <div style="max-width:920px;margin:0 auto;text-align:center">
-      <h2 class="rev" style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:#211C15;margin:0 0 16px">Не уверены, какая услуга вам нужна?</h2>
-      <p class="rev" style="font-size:clamp(16px,1.6vw,19px);color:#6B6253;max-width:540px;margin:0 auto 30px;line-height:1.6">На бесплатной консультации разберём вашу ситуацию и предложим конкретный маршрут.</p>
-      <a href="Contacts.dc.html" class="rev" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:7px;background:#BE7B3E;color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;transition:background .2s ease" style-hover="background:#1A140D !important;color:#fff !important">Получить консультацию
+      <h2 class="rev" style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0 0 16px">Не уверены, какая услуга вам нужна?</h2>
+      <p class="rev" style="font-size:clamp(16px,1.6vw,19px);color:#50686C;max-width:540px;margin:0 auto 30px;line-height:1.6">На бесплатной консультации разберём вашу ситуацию и предложим конкретный маршрут.</p>
+      <a href="Contacts.dc.html" class="rev" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:7px;background:#0F4C5C;color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;transition:background .2s ease" style-hover="background:#0E1416 !important;color:#fff !important">Получить консультацию
         
       </a>
     </div>
