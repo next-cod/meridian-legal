@@ -25,6 +25,11 @@
   body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#211C15;line-height:1.6;-webkit-font-smoothing:antialiased}
   ::selection{background:#BE7B3E;color:#fff}
   a{color:inherit;text-decoration:none}
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-track{background:#F3EAD9}
+  ::-webkit-scrollbar-thumb{background:#CFA06A;border-radius:10px;border:2px solid #F3EAD9}
+  ::-webkit-scrollbar-thumb:hover{background:#A86A2E}
+  html{scrollbar-width:thin;scrollbar-color:#CFA06A #F3EAD9}
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
   @media (max-width:720px){[data-svc-inner]{grid-template-columns:1fr!important}}
@@ -35,7 +40,7 @@
   <dc-import name="Header" active="services" hint-size="100%,70px"></dc-import>
 
   <!-- PAGE HERO -->
-  <section style="background:#FFFFFF;color:#211C15;padding:clamp(92px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #E9DECC">
+  <section style="background:#FFFFFF;color:#211C15;padding:clamp(80px,11vw,116px) clamp(18px,4vw,40px) clamp(30px,4vw,46px);border-bottom:1px solid #E9DECC">
     <div style="max-width:1240px;margin:0 auto">
       <div style="font-family:'Onest',sans-serif;font-size:13px;color:#978C7B;margin-bottom:26px"><a href="Home.dc.html" style="color:#A86A2E" style-hover="color:#8A5524 !important">Главная</a> · Услуги</div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
@@ -66,17 +71,17 @@
   </style>
 
   <!-- SERVICES GROUP A — статусы и визы (cream) -->
-  <section style="background:#FAF6EE;padding:clamp(54px,6.5vw,88px) clamp(18px,4vw,40px)">
+  <section style="background:#FAF6EE;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
     <div style="max-width:1140px;margin:0 auto">
 
       <!-- group eyebrow -->
-      <div class="rev" style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(34px,4vw,52px)">
+      <div class="rev" style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(24px,3.5vw,52px)">
         <span style="width:8px;height:8px;background:#BE7B3E;transform:rotate(45deg);border-radius:1px;flex:none"></span>
         <span style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;color:#A86A2E">Статусы и визы</span>
       </div>
 
       <!-- 1 — editorial numbered row -->
-      <div class="rev svc-row" style="padding-bottom:clamp(34px,4vw,52px)">
+      <div class="rev svc-row" style="padding-bottom:clamp(24px,3.5vw,52px)">
         <div class="svc-num">01</div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
@@ -104,7 +109,7 @@
       </div>
 
       <!-- 2 — editorial numbered row -->
-      <div class="rev svc-row" style="padding:clamp(34px,4vw,52px) 0;border-top:1px solid #E9DECC">
+      <div class="rev svc-row" style="padding:clamp(24px,3.5vw,52px) 0;border-top:1px solid #E9DECC">
         <div class="svc-num">02</div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
@@ -132,7 +137,7 @@
       </div>
 
       <!-- 3 — editorial numbered row -->
-      <div class="rev svc-row" style="padding-top:clamp(34px,4vw,52px);border-top:1px solid #E9DECC">
+      <div class="rev svc-row" style="padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #E9DECC">
         <div class="svc-num">03</div>
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
@@ -163,16 +168,16 @@
   </section>
 
   <!-- SERVICES GROUP B — бизнес и семья (white, alternating tone) -->
-  <section style="background:#FFFFFF;padding:clamp(54px,6.5vw,88px) clamp(18px,4vw,40px)">
+  <section style="background:#FFFFFF;padding:clamp(34px,6vw,88px) clamp(18px,4vw,40px)">
     <div style="max-width:1140px;margin:0 auto">
 
-      <div class="rev" style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(34px,4vw,52px)">
+      <div class="rev" style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(24px,3.5vw,52px)">
         <span style="width:8px;height:8px;background:#BE7B3E;transform:rotate(45deg);flex:none"></span>
         <span style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;color:#A86A2E">Бизнес и семья</span>
       </div>
 
       <!-- 4 — alternating media row: text left, tinted panel right -->
-      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center;padding-bottom:clamp(34px,4vw,52px)">
+      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center;padding-bottom:clamp(24px,3.5vw,52px)">
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
             <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#BE7B3E;letter-spacing:.08em">04</span>
@@ -196,7 +201,7 @@
       </div>
 
       <!-- 5 — alternating media row REVERSED: tinted panel left, text right -->
-      <div class="rev svc-rev svc-altrow" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:center;padding-top:clamp(34px,4vw,52px);border-top:1px solid #E9DECC">
+      <div class="rev svc-rev svc-altrow" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:center;padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #E9DECC">
         <div class="svc-panel" style="background:#FAF6EE;border:1px solid #EFE6D6;border-radius:10px;padding:clamp(24px,3vw,34px)">
           <div class="svc-meta-row" style="border-top:none;padding-top:0"><span style="color:#928873">Срок</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">2–5 месяцев</span></div>
           <div class="svc-meta-row"><span style="color:#928873">Бюджет</span><span style="font-family:'Onest',sans-serif;font-weight:600;color:#211C15">индивидуально</span></div>
@@ -220,7 +225,7 @@
       </div>
 
       <!-- 6 — alternating media row: text left, tinted panel right -->
-      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center;padding-top:clamp(34px,4vw,52px);border-top:1px solid #E9DECC">
+      <div class="rev svc-altrow" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center;padding-top:clamp(24px,3.5vw,52px);border-top:1px solid #E9DECC">
         <div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
             <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:#BE7B3E;letter-spacing:.08em">06</span>
