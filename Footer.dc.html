@@ -7,6 +7,10 @@
 </head>
 <body>
 <x-dc>
+<style>
+  .legal-link{color:#9A8F7E;text-decoration:none;cursor:pointer;transition:color .3s ease}
+  .legal-link:hover{color:#D29354}
+</style>
 <footer id="footer" style="background:#100C07;color:#C3B9A8;padding:clamp(38px,4.5vw,56px) clamp(18px,4vw,40px) 36px;font-family:'Onest',sans-serif">
   <div style="max-width:1240px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(244,238,227,.10)">
@@ -46,7 +50,13 @@
 
     <div style="padding-top:28px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start">
       <p style="font-size:13px;color:#6E6557;max-width:620px;margin:0;line-height:1.6">Информация на сайте носит справочный характер и не является юридической консультацией. Сроки и бюджеты ориентировочны и зависят от конкретной ситуации, юрисдикции и действующего законодательства.</p>
-      <p style="font-size:13px;color:#6E6557;margin:0">© 2026 Меридиан. Все права защищены.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:13px">
+          <a class="legal-link">Политика конфиденциальности</a>
+          <a class="legal-link">Пользовательское соглашение</a>
+        </div>
+        <p style="font-size:13px;color:#6E6557;margin:0">© 2026 Меридиан. Все права защищены.</p>
+      </div>
     </div>
 
     <div style="margin-top:26px;padding:16px 20px;border-radius:10px;background:rgba(190,123,62,.10);border:1px solid rgba(190,123,62,.22)">
