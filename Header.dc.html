@@ -15,13 +15,26 @@
   [data-nav]:hover::after{transform:scaleX(1)}
   [data-nav][data-active="true"]{color:#EAF4F5!important}
   [data-nav][data-active="true"]::after{transform:scaleX(1)}
-  #hdrMobile{display:none}
   #hdrBurger{display:none}
   header[data-scrolled="true"]{background:#0E1416!important;border-bottom-color:rgba(225,240,242,0.12)!important;box-shadow:0 10px 36px rgba(0,0,0,0.30)!important}
+
+  /* full-screen numbered mobile nav: fades + slides in, no instant snap */
+  #hdrMobile{position:fixed;top:70px;left:0;right:0;bottom:0;z-index:99;display:flex;flex-direction:column;justify-content:space-between;background:#0E1416;padding:8px clamp(20px,6vw,40px) 28px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-14px);transition:opacity .26s ease,transform .3s cubic-bezier(.2,.7,.2,1),visibility 0s linear .3s;overflow-y:auto}
+  .mnav{display:flex;align-items:baseline;gap:16px;padding:16px 2px;border-bottom:1px solid rgba(225,240,242,.10);color:#DCEAEC;font-size:clamp(23px,7vw,29px);font-weight:600;letter-spacing:-.01em;transition:color .2s ease,padding-left .28s ease}
+  .mnav::before{content:attr(data-n);flex:none;font-size:13px;font-weight:700;color:#4E97A6;letter-spacing:.04em}
+  .mnav:hover,.mnav:active{color:#fff;padding-left:8px}
+  /* animated two-line burger → morphs into an X on open */
+  #hdrBurger .bgx{position:relative;width:22px;height:14px;display:block;pointer-events:none}
+  #hdrBurger .bgx i{position:absolute;left:0;height:2px;border-radius:2px;background:currentColor;transition:transform .32s cubic-bezier(.2,.7,.2,1),width .32s cubic-bezier(.2,.7,.2,1),top .32s cubic-bezier(.2,.7,.2,1)}
+  #hdrBurger .bgx i:nth-child(1){top:1px;width:22px}
+  #hdrBurger .bgx i:nth-child(2){top:11px;width:13px}
+  #hdrBurger:hover .bgx i:nth-child(2){width:22px}
+  #hdrBurger[data-open="true"] .bgx i:nth-child(1){top:6px;width:22px;transform:rotate(45deg)}
+  #hdrBurger[data-open="true"] .bgx i:nth-child(2){top:6px;width:22px;transform:rotate(-45deg)}
   @media (max-width:860px){
     #hdrDeskNav,#hdrCta{display:none!important}
     #hdrBurger{display:inline-flex!important}
-    #hdrMobile[data-open="true"]{display:flex!important}
+    #hdrMobile[data-open="true"]{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition:opacity .26s ease,transform .3s cubic-bezier(.2,.7,.2,1),visibility 0s linear 0s}
   }
 </style>
 </helmet>
@@ -44,19 +57,27 @@
 
     <a id="hdrCta" href="Contacts.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:7px;background:#0F4C5C;color:#fff;font-weight:600;font-size:14px;transition:background .2s ease,color .2s ease" style-hover="background:#fff !important;color:#0E1416 !important">Бесплатная консультация</a>
 
-    <button id="hdrBurger" onClick="{{ toggleMenu }}" aria-label="Меню" style="display:none;width:42px;height:42px;border-radius:8px;border:1px solid rgba(225,240,242,.18);background:rgba(225,240,242,.04);color:#EAF4F5;cursor:pointer;align-items:center;justify-content:center" style-hover="background:rgba(15,76,92,.20) !important;border-color:#0F4C5C !important;color:#2A8499 !important">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    <button id="hdrBurger" data-open="{{ menuOpenStr }}" onClick="{{ toggleMenu }}" aria-label="Меню" style="display:none;width:44px;height:44px;border-radius:11px;border:1px solid rgba(225,240,242,.14);background:transparent;color:#EAF4F5;cursor:pointer;align-items:center;justify-content:center;transition:background .22s ease,border-color .22s ease,color .22s ease" style-hover="background:rgba(15,76,92,.30) !important;border-color:#2A8499 !important;color:#8FD0DC !important">
+      <span class="bgx" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 
-  <div id="hdrMobile" data-open="{{ menuOpenStr }}" style="flex-direction:column;padding:8px 22px 22px;gap:2px;background:rgba(14,20,22,0.99);border-top:1px solid rgba(225,240,242,.08)">
-    <a href="Home.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Главная</a>
-    <a href="Services.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Услуги</a>
-    <a href="Countries.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Страны</a>
-    <a href="Process.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Как мы работаем</a>
-    <a href="Cases.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px;border-bottom:1px solid rgba(225,240,242,.07)">Кейсы</a>
-    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="padding:14px 4px;color:#DCEAEC;font-size:16px">Контакты</a>
-    <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="margin-top:14px;text-align:center;padding:14px;border-radius:7px;background:#0F4C5C;color:#fff;font-weight:600" style-hover="background:#fff !important;color:#0E1416 !important">Бесплатная консультация</a>
+  <div id="hdrMobile" data-open="{{ menuOpenStr }}">
+    <nav style="display:flex;flex-direction:column;padding-top:8px">
+      <a href="Home.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="00">Главная</a>
+      <a href="Services.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="01">Услуги</a>
+      <a href="Countries.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="02">Страны</a>
+      <a href="Process.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="03">Как мы работаем</a>
+      <a href="Cases.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="04">Кейсы</a>
+      <a href="Contacts.dc.html" onClick="{{ closeMenu }}" class="mnav" data-n="05">Контакты</a>
+    </nav>
+    <div style="padding-top:24px">
+      <a href="Contacts.dc.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;border-radius:7px;background:#0F4C5C;color:#fff;font-weight:600;font-size:15.5px" style-hover="background:#fff !important;color:#0E1416 !important">Бесплатная консультация</a>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:#7C9498">
+        <span>8 903 217-46-58</span>
+        <span>Telegram · @meridian_legal</span>
+      </div>
+    </div>
   </div>
 </header>
 </x-dc>

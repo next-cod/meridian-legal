@@ -19,10 +19,6 @@
 <style>
   *{box-sizing:border-box}
   h1,h2,h3{font-weight:600!important}
-  .tlink{position:relative;transition:color .2s ease}
-  .tlink::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-  .tlink:hover{color:#0A3A46}
-  .tlink:hover::after{transform:scaleX(1)}
   html{scroll-behavior:smooth;scroll-padding-top:90px}
   body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#182A2B;line-height:1.6;-webkit-font-smoothing:antialiased}
   ::selection{background:#0F4C5C;color:#fff}
@@ -35,10 +31,6 @@
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
   [data-inp][data-error="true"]{border-color:#C0492E!important;box-shadow:0 0 0 3px rgba(192,73,46,0.12)!important}
-  [data-faq-ans]{overflow:hidden;max-height:0;opacity:0;padding-top:0;transition:max-height .42s ease,opacity .35s ease,padding-top .35s ease}
-  [data-faq-ans][data-open="true"]{max-height:460px;opacity:1;padding-top:4px}
-  [data-faq-chev]{display:inline-flex;color:#738B8F;transition:transform .35s ease,color .2s ease}
-  [data-faq-chev][data-open="true"]{transform:rotate(180deg);color:#2A8499}
   .csel-chev{display:inline-flex;flex:none;color:#0F4C5C;transition:transform .25s ease}
   [data-open="true"] .csel-chev{transform:rotate(180deg)}
   .csel-opt{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 13px;border-radius:5px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Onest',sans-serif;font-size:15.5px;color:#2B4346;transition:background .15s ease,color .15s ease}
@@ -46,8 +38,7 @@
   .csel-opt[data-active="true"]{background:#D8EBED;color:#0F4C5C}
   .csel-opt .csel-ck{flex:none;opacity:0;color:#0F4C5C;transition:opacity .15s ease}
   .csel-opt[data-active="true"] .csel-ck{opacity:1}
-  @media (max-width:880px){#ctaInner{grid-template-columns:1fr!important}#contactGrid{grid-template-columns:1fr 1fr!important}}
-  @media (max-width:520px){#contactGrid{grid-template-columns:1fr!important}}
+  @media (max-width:880px){#ctaInner{grid-template-columns:1fr!important;align-items:initial!important}}
 </style>
 </helmet>
 
@@ -74,7 +65,7 @@
             <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#2B4346"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M20 6 9 17l-5-5"></path></svg>Полное сопровождение на русском</div>
           </div>
 
-          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;color:#7A9296;margin-bottom:14px">Связаться напрямую</div>
+          <div style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#2B4346;margin-bottom:14px">Связаться напрямую</div>
           <div id="contactGrid" style="display:flex;flex-direction:column;gap:10px">
             <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.5a2 2 0 0 1-.6 1.9l-1.2 1.2a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 1.9-.5l2.5.5a2 2 0 0 1 1.7 2Z"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">Телефон</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500">8 903 217-46-58</div></div></a>
             <a style="display:flex;align-items:center;gap:12px;padding:16px;border-radius:8px;background:#fff;border:1px solid #D3E4E6;transition:border-color .2s,background .2s" style-hover="border-color:#0F4C5C !important;background:#E0F0F2 !important"><span style="width:38px;height:38px;border-radius:10px;background:#D8EBED;display:inline-flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7L22 6"></path></svg></span><div style="min-width:0"><div style="font-size:12px;color:#7A9296;font-family:'Onest',sans-serif">Email</div><div style="font-size:14.5px;color:#182A2B;font-family:'Onest',sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis">meridian.legal@gmail.com</div></div></a>

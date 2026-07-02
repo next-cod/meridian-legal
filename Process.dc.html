@@ -19,10 +19,6 @@
 <style>
   *{box-sizing:border-box}
   h1,h2,h3{font-weight:600!important}
-  .tlink{position:relative;transition:color .2s ease}
-  .tlink::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-  .tlink:hover{color:#0A3A46}
-  .tlink:hover::after{transform:scaleX(1)}
   html{scroll-behavior:smooth;scroll-padding-top:90px}
   body{margin:0;background:#FFFFFF;font-family:'Onest',sans-serif;color:#182A2B;line-height:1.6;-webkit-font-smoothing:antialiased}
   ::selection{background:#0F4C5C;color:#fff}
@@ -34,7 +30,8 @@
   html{scrollbar-width:thin;scrollbar-color:#4E97A6 #DCEAEC}
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
   .rev{animation:rise .9s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 2% cover 24%}
-  @media (max-width:1024px){#guarGrid,#advGrid{grid-template-columns:1fr!important}}
+  @media (max-width:1024px){#advGrid{grid-template-columns:1fr!important}#advLead{padding:24px!important}}
+  @media (max-width:760px){#advList{grid-template-columns:1fr!important}#advList>div{grid-column:auto!important}#advList>div p{max-width:none!important}}
   @media (max-width:620px){[data-step]{gap:16px!important}[data-badge]{width:46px!important;height:46px!important;font-size:16px!important}#tlLine{left:22px!important}#prochero{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important}#prochero>div{border-right:none!important;padding-right:0!important}}
 </style>
 </helmet>
@@ -75,8 +72,8 @@
           <span data-badge style="width:56px;height:56px;border-radius:50%;background:#0F4C5C;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;font-size:19px;flex:none;z-index:1;box-shadow:0 0 0 6px #FFFFFF">01</span>
           <div style="flex:1;padding-top:3px">
             <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:21px;color:#182A2B;margin:0 0 9px">Консультация</h3>
-            <p style="font-size:15.5px;color:#50686C;margin:0 0 14px;line-height:1.55">Разбираем вашу ситуацию, цель и бюджет. Честно говорим, что реально, а что – нет. Бесплатно и без обязательств.</p>
-            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> понимание подходящих вариантов.</span></div>
+            <p style="font-size:15.5px;color:#50686C;margin:0 0 14px;line-height:1.55">Разбираем вашу ситуацию, цель и бюджет, честно говорим, что реально в вашем случае. Бесплатно и без обязательств.</p>
+            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> понимание подходящих вариантов</span></div>
           </div>
         </div>
 
@@ -85,7 +82,7 @@
           <div style="flex:1;padding-top:3px">
             <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:21px;color:#182A2B;margin:0 0 9px">Стратегия и подбор страны</h3>
             <p style="font-size:15.5px;color:#50686C;margin:0 0 14px;line-height:1.55">Предлагаем 2–3 маршрута с расчётом сроков, затрат и рисков. Заключаем договор с фиксированной ценой.</p>
-            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> план действий и смета на руках.</span></div>
+            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> план действий и смета на руках</span></div>
           </div>
         </div>
 
@@ -94,7 +91,7 @@
           <div style="flex:1;padding-top:3px">
             <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:21px;color:#182A2B;margin:0 0 9px">Сбор и подача документов</h3>
             <p style="font-size:15.5px;color:#50686C;margin:0 0 14px;line-height:1.55">Собираем, переводим и легализуем документы, готовим объяснение источника средств и подаём. На вас – минимум беготни.</p>
-            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> дело принято и в работе.</span></div>
+            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> дело принято и в работе</span></div>
           </div>
         </div>
 
@@ -103,7 +100,7 @@
           <div style="flex:1;padding-top:3px">
             <h3 style="font-family:'Onest',sans-serif;font-weight:700;font-size:21px;color:#182A2B;margin:0 0 9px">Получение ВНЖ</h3>
             <p style="font-size:15.5px;color:#50686C;margin:0 0 14px;line-height:1.55">Сопровождаем до карты резидента, помогаем со счётом, страховкой и первыми шагами на новом месте.</p>
-            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> вы – легальный резидент.</span></div>
+            <div style="display:inline-flex;align-items:center;gap:9px;font-size:14px;color:#50686C;background:#DCEEF0;border-left:3px solid #0F4C5C;border-radius:6px;padding:9px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2.2" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg><span><span style="color:#0F4C5C;font-family:'Onest',sans-serif;font-weight:600">Результат:</span> вы – легальный резидент</span></div>
           </div>
         </div>
 
@@ -152,13 +149,19 @@
       <div class="rev" style="max-width:680px;margin-bottom:clamp(28px,3.5vw,42px)">
         <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0">Детали, которые видно в работе</h2>
       </div>
-      <div id="advGrid" style="display:grid;grid-template-columns:repeat(3,1fr);column-gap:clamp(28px,4vw,56px);row-gap:0">
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Юристы в стране переезда</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Не посредники: специалисты на месте знают локальную практику.</p></div></div>
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Проверка до подачи</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Находим ошибки раньше чиновника. Дело уходит чистым.</p></div></div>
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Сопровождение по AML</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Объяснение источника средств под требования банка и службы.</p></div></div>
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Поддержка на русском</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Объясняем сложное простым языком на каждом шаге.</p></div></div>
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Вся семья под ведением</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Ведём каждого члена семьи до его карты резидента.</p></div></div>
-        <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">15 лет практики</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">1 800+ семей и 18 стран – опыт, который экономит время.</p></div></div>
+      <div id="advGrid" style="display:grid;grid-template-columns:1fr 1.5fr;column-gap:clamp(28px,4vw,56px)">
+        <div class="rev" id="advLead" style="background:#0F4C5C;border-radius:14px;padding:clamp(26px,3vw,34px);display:flex;flex-direction:column;justify-content:center;gap:10px">
+          <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(38px,4.2vw,54px);line-height:1;color:#fff;letter-spacing:-.02em">15 лет</span>
+          <h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:18px;color:#fff;margin:0">практики команды</h3>
+          <p style="font-size:14.5px;color:#CFE1E3;margin:0;line-height:1.55">1 800+ семей и 18 стран – опыт, который экономит вам время</p>
+        </div>
+        <div id="advList" style="display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,4vw,56px)">
+          <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Юристы в стране переезда</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Специалисты на месте знают локальную практику изнутри</p></div>
+          <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Проверка до подачи</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Находим ошибки раньше чиновника – дело уходит чистым</p></div>
+          <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Сопровождение по AML</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Объяснение источника средств под требования банка и службы</p></div>
+          <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6"><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Поддержка на русском</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55">Объясняем сложное простым языком на каждом шаге</p></div>
+          <div class="rev" style="padding:clamp(20px,2.5vw,28px) 0;border-top:1px solid #D3E4E6;border-bottom:1px solid #D3E4E6;grid-column:1 / -1"><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:17px;color:#182A2B;margin:0 0 6px">Вся семья под ведением</h3><p style="font-size:14.5px;color:#50686C;margin:0;line-height:1.55;max-width:360px">Ведём каждого члена семьи до его карты резидента</p></div>
+        </div>
       </div>
     </div>
   </section>

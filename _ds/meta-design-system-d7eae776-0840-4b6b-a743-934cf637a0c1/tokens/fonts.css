@@ -2,7 +2,13 @@
    FONTS — Meta Design System
    Optimistic VF is Meta's proprietary variable display face and
    cannot be redistributed. Montserrat (a documented fallback) is
-   substituted as the nearest geometric-humanist match on Google
-   Fonts. Replace with licensed Optimistic VF for production.
+   the nearest geometric-humanist match on Google Fonts, wired via
+   --font-display/--font-body in typography.css.
+
+   The Montserrat @import is intentionally NOT loaded here: this
+   site's pages set their own type family ('Onest') directly and
+   never reference the --font-display/--font-body tokens or the
+   .t-* helper classes, so fetching Montserrat would just be a
+   dead network request on every page. Re-add the @import only if
+   a page starts using those tokens/classes.
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');

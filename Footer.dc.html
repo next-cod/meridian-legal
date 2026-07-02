@@ -10,6 +10,13 @@
 <style>
   .legal-link{color:#8AA6AA;text-decoration:none;cursor:pointer;transition:color .3s ease}
   .legal-link:hover{color:#2A8499}
+  .disc-trigger{display:inline-flex;align-items:center;gap:8px;background:none;border:none;padding:0;margin:0;cursor:pointer;color:#7C9498;font-family:'Onest',sans-serif;font-size:13px;line-height:1.6;text-align:left;transition:color .2s ease}
+  .disc-trigger:hover{color:#B7CDD0}
+  .disc-chev{flex:none;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+  .disc-trigger[data-open="true"] .disc-chev{transform:rotate(180deg)}
+  .disc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.2,.7,.2,1)}
+  .disc-panel[data-open="true"]{grid-template-rows:1fr}
+  .disc-panel>div{overflow:hidden}
 </style>
 <footer id="footer" style="background:#0C1214;color:#A7C2C6;padding:clamp(38px,4.5vw,56px) clamp(18px,4vw,40px) 36px;font-family:'Onest',sans-serif">
   <div style="max-width:1240px;margin:0 auto">
@@ -59,12 +66,31 @@
       </div>
     </div>
 
-    <div style="margin-top:26px;padding:16px 20px;border-radius:10px;background:rgba(15,76,92,.10);border:1px solid rgba(15,76,92,.22)">
-      <p style="font-size:13px;color:#A7C2C6;margin:0;line-height:1.7;max-width:1010px"><span style="color:#3E97AC;font-weight:700">Это не настоящий сайт.</span> Это демонстрационный пример — учебный кейс, сделанный для портфолио, чтобы показать дизайн и вёрстку. Компания «МЕРИДИАН» вымышлена: все названия, имена, контакты, цифры, кейсы и отзывы выдуманы исключительно для показа оформления, любые совпадения с реальными людьми и организациями случайны. Сайт не оказывает услуг, не принимает заявок и не собирает персональные данные, не является публичной офертой или рекламой.</p>
+    <div style="margin-top:22px">
+      <button type="button" class="disc-trigger" data-open="{{ discOpenStr }}" onClick="{{ toggleDisc }}" aria-expanded="{{ discOpenStr }}">
+        <span style="width:15px;height:15px;border-radius:50%;border:1px solid #4E6C70;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex:none;color:#4E97A6">i</span>
+        Это учебный демонстрационный проект — нажмите, чтобы прочитать дисклеймер
+        <svg class="disc-chev" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 1l4 4 4-4"></path></svg>
+      </button>
+      <div class="disc-panel" data-open="{{ discOpenStr }}">
+        <div>
+          <p style="font-size:13px;color:#A7C2C6;margin:12px 0 0;line-height:1.7;max-width:1010px;padding:14px 18px;border-radius:10px;background:rgba(15,76,92,.10);border:1px solid rgba(15,76,92,.22)"><span style="color:#3E97AC;font-weight:700">Это не настоящий сайт.</span> Это демонстрационный пример — учебный кейс, сделанный для портфолио, чтобы показать дизайн и вёрстку. Компания «МЕРИДИАН» вымышлена: все названия, имена, контакты, цифры, кейсы и отзывы выдуманы исключительно для показа оформления, любые совпадения с реальными людьми и организациями случайны. Сайт не оказывает услуг, не принимает заявок и не собирает персональные данные, не является публичной офертой или рекламой.</p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:420}}"></script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:420}}">
+class Component extends DCLogic {
+  state = { discOpen:false };
+  renderVals(){
+    return {
+      discOpenStr: this.state.discOpen ? 'true' : 'false',
+      toggleDisc: () => this.setState(s => ({ discOpen: !s.discOpen })),
+    };
+  }
+}
+</script>
 </body>
 </html>
