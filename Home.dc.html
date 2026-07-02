@@ -51,19 +51,31 @@
   .card{transition:border-color .3s,background .3s}
   .card:hover{border-color:#A5CDD4;background:#E0F0F2}
 
-  /* ---- quick jump launcher ---- */
-  .qnav{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-  .qtile{display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:120px;padding:18px 18px 16px;border:1px solid #D3E4E6;border-radius:12px;background:#fff;transition:transform .28s cubic-bezier(.2,.7,.2,1),border-color .28s,background .28s,box-shadow .28s}
-  .qtile:hover{transform:translateY(-3px);border-color:#A5CDD4;background:#F2F9FA;box-shadow:0 12px 28px rgba(10,40,48,.09)}
-  .qt-ic{color:#0F4C5C;flex:none}
-  .qt-label{display:block;font-family:'Onest',sans-serif;font-weight:600;font-size:16px;color:#182A2B;line-height:1.2}
-  .qt-sub{display:block;margin-top:3px;font-size:13px;color:#7A9296}
+  /* ---- quick jump launcher (lively tiles) ---- */
+  .qnav{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .qtile{position:relative;display:flex;flex-direction:column;gap:22px;min-height:152px;padding:20px 18px 18px;border:1px solid #D3E4E6;border-radius:14px;background:#fff;overflow:hidden;transition:transform .32s cubic-bezier(.2,.7,.2,1),border-color .32s,box-shadow .32s}
+  .qtile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#0F4C5C;transform:scaleY(0);transform-origin:top;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
+  .qtile:hover{transform:translateY(-4px);border-color:#A5CDD4;box-shadow:0 16px 36px rgba(10,40,48,.11)}
+  .qtile:hover::before{transform:scaleY(1)}
+  .qt-badge{width:46px;height:46px;border-radius:13px;background:#E0F0F2;color:#0F4C5C;display:inline-flex;align-items:center;justify-content:center;flex:none;transition:background .32s ease,color .32s ease,transform .36s cubic-bezier(.2,.7,.2,1)}
+  .qtile:hover .qt-badge{background:#0F4C5C;color:#fff;transform:translateY(-2px) rotate(-5deg) scale(1.06)}
+  .qt-idx{position:absolute;top:18px;right:18px;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:#B7CDD0;letter-spacing:.06em;transition:color .32s ease}
+  .qtile:hover .qt-idx{color:#0F4C5C}
+  .qt-main{margin-top:auto}
+  .qt-label{display:flex;align-items:center;gap:7px;font-family:'Onest',sans-serif;font-weight:600;font-size:16px;color:#182A2B;line-height:1.2}
+  .qt-arw{flex:none;opacity:0;transform:translateX(-6px);transition:opacity .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+  .qtile:hover .qt-arw{opacity:1;transform:translateX(0)}
+  .qt-sub{display:block;margin-top:4px;font-size:13px;color:#7A9296}
   .qtile-accent{background:#0F4C5C;border-color:#0F4C5C}
-  .qtile-accent .qt-ic,.qtile-accent .qt-label{color:#fff}
-  .qtile-accent .qt-sub{color:rgba(234,244,245,.78)}
-  .qtile-accent:hover{background:#0A3A46;border-color:#0A3A46;box-shadow:0 12px 28px rgba(10,40,48,.16)}
+  .qtile-accent::before{display:none}
+  .qtile-accent .qt-badge{background:rgba(255,255,255,.15);color:#fff}
+  .qtile-accent:hover .qt-badge{background:#fff;color:#0F4C5C}
+  .qtile-accent .qt-label{color:#fff}
+  .qtile-accent .qt-sub{color:rgba(234,244,245,.8)}
+  .qtile-accent .qt-idx{color:rgba(234,244,245,.5)}
+  .qtile-accent:hover{box-shadow:0 16px 36px rgba(10,40,48,.24)}
   @media (max-width:900px){.qnav{grid-template-columns:repeat(3,1fr)}}
-  @media (max-width:600px){.qnav{grid-template-columns:repeat(2,1fr)}.qtile{min-height:0}.qtile-accent{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px}}
+  @media (max-width:600px){.qnav{grid-template-columns:repeat(2,1fr)}.qtile{min-height:0;gap:16px}.qtile-accent{grid-column:1 / -1}}
 
   /* ---- hero slides: modern-format background with jpeg fallback ---- */
   .hs{width:16.6667%;height:100%;background-position:center 44%;background-size:cover}
@@ -154,24 +166,29 @@
       <p style="margin:0 0 16px;font-size:14px;color:#50686C">Перейдите сразу к тому, что нужно</p>
       <div class="qnav">
         <a href="#services" class="qtile">
-          <svg class="qt-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 12l9 5 9-5"></path></svg>
-          <span><span class="qt-label">Услуги</span><span class="qt-sub">6 направлений</span></span>
+          <span class="qt-idx">01</span>
+          <span class="qt-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2"></rect></svg></span>
+          <span class="qt-main"><span class="qt-label">Услуги <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">6 направлений</span></span>
         </a>
         <a href="#countries" class="qtile">
-          <svg class="qt-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z"></path></svg>
-          <span><span class="qt-label">Страны</span><span class="qt-sub">18 направлений</span></span>
+          <span class="qt-idx">02</span>
+          <span class="qt-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4Z"></path><path d="M9 4v13M15 6.5v13"></path></svg></span>
+          <span class="qt-main"><span class="qt-label">Страны <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">18 направлений</span></span>
         </a>
         <a href="#process" class="qtile">
-          <svg class="qt-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="6" r="1.6"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r="1.6"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r="1.6"></circle><path d="M9 18h11"></path></svg>
-          <span><span class="qt-label">Как мы работаем</span><span class="qt-sub">4 шага</span></span>
+          <span class="qt-idx">03</span>
+          <span class="qt-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4.5"></path><path d="M6 5h10.5l-2.3 3 2.3 3H6"></path></svg></span>
+          <span class="qt-main"><span class="qt-label">Как мы работаем <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">4 шага</span></span>
         </a>
         <a href="#why" class="qtile">
-          <svg class="qt-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.2-2.9 6.8-7 8-4.1-1.2-7-3.8-7-8V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
-          <span><span class="qt-label">Гарантии</span><span class="qt-sub">почему нам верят</span></span>
+          <span class="qt-idx">04</span>
+          <span class="qt-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 7 7 8.5 4-1.5 7-4.2 7-8.5V6l-7-3Z"></path><path d="M9 11.5l2 2 4-4.2"></path></svg></span>
+          <span class="qt-main"><span class="qt-label">Гарантии <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">почему нам верят</span></span>
         </a>
         <a href="Contacts.dc.html" class="qtile qtile-accent">
-          <svg class="qt-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4V6a1 1 0 0 1 1-1z"></path></svg>
-          <span><span class="qt-label">Консультация</span><span class="qt-sub">бесплатно</span></span>
+          <span class="qt-idx">05</span>
+          <span class="qt-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12a7.5 7.5 0 0 1 15 0"></path><rect x="3" y="12" width="3.6" height="6.2" rx="1.6"></rect><rect x="17.4" y="12" width="3.6" height="6.2" rx="1.6"></rect><path d="M19.2 18.2a3 3 0 0 1-3 3H13"></path></svg></span>
+          <span class="qt-main"><span class="qt-label">Консультация <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">бесплатно</span></span>
         </a>
       </div>
     </div>
@@ -186,7 +203,7 @@
           <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3vw,37px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0 0 20px">Маршрут собираем под вашу цель и бюджет</h2>
           <p style="font-size:16px;color:#50686C;line-height:1.6;margin:0 0 28px;max-width:340px">Шесть направлений. Какое подойдёт именно вам – решаем на консультации, исходя из бюджета и цели.</p>
           <a href="Services.dc.html" class="tlink" style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#0F4C5C">Все услуги подробно
-            <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h12M8.5 1l5 4.5-5 4.5"></path></svg>
+            <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
         </div>
 
@@ -194,32 +211,32 @@
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0;border-bottom:1px solid #D3E4E6">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">01</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">ВНЖ за инвестиции</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Резидентство через недвижимость или вклад – под бюджет и цель</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0;border-bottom:1px solid #D3E4E6">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">02</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">Виза цифрового кочевника</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Легальное проживание для удалёнщиков – без привязки к работодателю</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0;border-bottom:1px solid #D3E4E6">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">03</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">Гражданство за инвестиции</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Второй паспорт за 6–14 месяцев, свобода передвижения и защита активов</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0;border-bottom:1px solid #D3E4E6">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">04</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">Бизнес-иммиграция</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Компания и ВНЖ для предпринимателей – структура, которая проходит проверку</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0;border-bottom:1px solid #D3E4E6">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">05</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">Воссоединение семьи</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Перевозим супругов, детей и родителей – ведём каждого до его карты</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
           <a href="Services.dc.html" class="svcrow" style="display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:baseline;padding:26px 0">
             <span class="svcnum" style="font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#93B4BA;transition:color .3s;width:30px">06</span>
             <div><h3 style="font-family:'Onest',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#182A2B;margin:0 0 5px">Сопровождение «под ключ»</h3><p style="font-size:15px;color:#50686C;margin:0;line-height:1.5">Берём на себя всё: от стратегии до получения карты резидента</p></div>
-            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M1 8h16M12 1l7 7-7 7"></path></svg>
+            <svg class="svcarrow" width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#0F4C5C" stroke-width="1.6" style="align-self:center"><path d="M2 8h14.5M11 2l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
         </div>
       </div>
@@ -234,7 +251,7 @@
           <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3vw,37px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0">Куда переезжают граждане РФ</h2>
         </div>
         <a href="Countries.dc.html" class="tlink" style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#0F4C5C;white-space:nowrap">Все 18 стран
-          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h12M8.5 1l5 4.5-5 4.5"></path></svg>
+          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
       </div>
     </div>
@@ -261,7 +278,7 @@
           <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3vw,37px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0">Четыре шага – и вы резидент</h2>
         </div>
         <a href="Process.dc.html" class="tlink" style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#0F4C5C;white-space:nowrap">Подробнее о процессе
-          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h12M8.5 1l5 4.5-5 4.5"></path></svg>
+          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
       </div>
 
@@ -294,7 +311,7 @@
         <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:clamp(25px,3vw,38px);line-height:1.1;letter-spacing:-.02em;color:#182A2B;margin:0 0 18px">Доверие – в деталях, которые видно в работе</h2>
         <p style="font-size:16px;color:#50686C;line-height:1.6;margin:0 0 24px;max-width:340px">Мы отвечаем за результат деньгами и репутацией. Вот что за этим стоит.</p>
         <a href="Process.dc.html" class="tlink" style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#0F4C5C">Все гарантии и этапы
-          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h12M8.5 1l5 4.5-5 4.5"></path></svg>
+          <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
       </div>
 
@@ -314,12 +331,12 @@
     <div class="rev" id="quoteCard" style="max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;background:#fff;border:1px solid #D3E4E6;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(10,40,48,.05)">
       <div class="bg-photo bg-testimonial" style="flex:1 1 270px;min-height:300px"></div>
       <div style="flex:2 1 440px;padding:clamp(32px,4vw,52px);display:flex;flex-direction:column;justify-content:center">
-        <svg width="46" height="46" viewBox="0 0 24 24" fill="#A5CDD4" style="margin-bottom:6px"><path d="M10 7H6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4V7Zm10 0h-4a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4V7Z"></path></svg>
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="#A5CDD4" style="margin-bottom:6px"><path d="M7.7 6.2C5.1 7.3 3.6 9.7 3.6 13v4.8h6.6V11H7.1c.1-1.7 1-2.8 2.9-3.3L7.7 6.2Zm10 0c-2.6 1.1-4.1 3.5-4.1 6.8v4.8h6.6V11h-3.1c.1-1.7 1-2.8 2.9-3.3L17.7 6.2Z"></path></svg>
         <p style="font-family:'Onest',sans-serif;font-weight:400;font-style:italic;font-size:clamp(21px,2.6vw,30px);line-height:1.38;letter-spacing:-.01em;color:#22383A;margin:0 0 26px">«Ожидал бюрократический ад, а получил спокойный проект: на каждый вопрос – внятный ответ за час, цена зафиксирована в договоре, сроки выдержаны. Для юристов это редкость».</p>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #D3E4E6;padding-top:22px">
           <div><div style="font-family:'Onest',sans-serif;font-weight:600;font-size:16px;color:#182A2B">Андрей К.</div><div style="font-size:13.5px;color:#7A9296;margin-top:2px">Москва → Белград · ВНЖ Сербии за 7 недель</div></div>
           <a href="Cases.dc.html" class="tlink" style="font-family:'Onest',sans-serif;font-weight:600;font-size:15px;color:#0F4C5C">Читать кейсы
-            <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h12M8.5 1l5 4.5-5 4.5"></path></svg>
+            <svg class="tlink-arrow" width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </a>
         </div>
       </div>
@@ -329,7 +346,7 @@
   <!-- ============ CTA (full-bleed band with trust strip) ============ -->
   <section style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2A8499 0%,#0F4C5C 100%);padding:clamp(36px,6.5vw,96px) clamp(18px,4vw,40px)">
     <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 2px,transparent 2px 26px);pointer-events:none"></div>
-    <svg style="position:absolute;right:clamp(-120px,-6vw,-70px);top:50%;transform:translateY(-50%);width:clamp(280px,30vw,420px);height:clamp(280px,30vw,420px);opacity:.13;pointer-events:none" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="0.55"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9Z"></path></svg>
+    <svg style="position:absolute;right:clamp(-120px,-6vw,-70px);top:50%;transform:translateY(-50%);width:clamp(280px,30vw,420px);height:clamp(280px,30vw,420px);opacity:.13;pointer-events:none" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="0.55"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4.2" ry="9"></ellipse><path d="M3.2 12h17.6M4.9 7.4h14.2M4.9 16.6h14.2" stroke-linecap="round"></path></svg>
 
     <div style="position:relative;max-width:1240px;margin:0 auto">
       <div id="statStrip" class="rev" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,34px);padding-bottom:clamp(28px,4vw,44px);margin-bottom:clamp(28px,4vw,44px);border-bottom:1px solid rgba(255,255,255,.18)">
