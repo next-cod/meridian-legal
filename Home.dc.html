@@ -78,6 +78,7 @@
   .qtile-accent:hover .qt-idx{color:#fff}
   @media (max-width:900px){.qnav{grid-template-columns:repeat(3,1fr)}}
   @media (max-width:600px){.qnav{grid-template-columns:repeat(2,1fr)}.qtile{min-height:0;gap:16px}.qtile-accent{grid-column:1 / -1}}
+  @media (min-width:1025px){#quickNav{display:none}}
 
   /* ---- hero slides: modern-format background with jpeg fallback ---- */
   .hs{width:16.6667%;height:100%;background-position:center 44%;background-size:cover}
@@ -163,7 +164,7 @@
   </section>
 
   <!-- ============ QUICK JUMP (instant navigation) ============ -->
-  <section style="background:#EAF4F5;padding:clamp(24px,3.5vw,40px) clamp(18px,4vw,40px);border-top:1px solid #D3E4E6">
+  <section id="quickNav" style="background:#EAF4F5;padding:clamp(24px,3.5vw,40px) clamp(18px,4vw,40px);border-top:1px solid #D3E4E6">
     <div style="max-width:1240px;margin:0 auto">
       <p style="margin:0 0 16px;font-size:14px;color:#50686C">Перейдите сразу к тому, что нужно</p>
       <div class="qnav">
