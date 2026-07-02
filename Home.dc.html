@@ -54,9 +54,7 @@
   /* ---- quick jump launcher (lively tiles) ---- */
   .qnav{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
   .qtile{position:relative;display:flex;flex-direction:column;gap:22px;min-height:152px;padding:20px 18px 18px;border:1px solid #D3E4E6;border-radius:14px;background:#fff;overflow:hidden;transition:border-color .34s ease,background .34s ease,box-shadow .34s ease}
-  .qtile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#0F4C5C;transform:scaleY(0);transform-origin:top;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
   .qtile:hover{border-color:#A5CDD4;background:#F5FAFB;box-shadow:0 6px 20px rgba(10,40,48,.06)}
-  .qtile:hover::before{transform:scaleY(1)}
   .qt-badge{width:46px;height:46px;border-radius:13px;background:#E0F0F2;color:#0F4C5C;display:inline-flex;align-items:center;justify-content:center;flex:none;transition:background .34s ease,color .34s ease}
   .qtile:hover .qt-badge{background:#0F4C5C;color:#fff}
   .qt-ic{width:25px;height:25px;display:block;background-color:#0F4C5C;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain;transition:background-color .34s ease}
@@ -64,10 +62,11 @@
   .qt-idx{position:absolute;top:18px;right:18px;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:#B7CDD0;letter-spacing:.06em;transition:color .32s ease}
   .qtile:hover .qt-idx{color:#0F4C5C}
   .qt-main{margin-top:auto}
-  .qt-label{font-family:'Onest',sans-serif;font-weight:600;font-size:16px;color:#182A2B;line-height:1.2}
+  .qt-label{display:flex;align-items:center;gap:7px;font-family:'Onest',sans-serif;font-weight:600;font-size:16px;color:#182A2B;line-height:1.2}
+  .qt-arw{flex:none;opacity:0;transform:translateX(-6px);transition:opacity .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+  .qtile:hover .qt-arw{opacity:1;transform:translateX(0)}
   .qt-sub{display:block;margin-top:4px;font-size:13px;color:#7A9296}
   .qtile-accent{background:#0F4C5C;border-color:#0F4C5C}
-  .qtile-accent::before{display:none}
   .qtile-accent .qt-badge{background:rgba(255,255,255,.15);color:#fff}
   .qtile-accent:hover .qt-badge{background:#fff;color:#0F4C5C}
   .qtile-accent .qt-ic{background-color:#fff}
@@ -171,27 +170,27 @@
         <a href="#services" class="qtile">
           <span class="qt-idx">01</span>
           <span class="qt-badge"><span class="qt-ic" style="-webkit-mask-image:url('images/ic-services.png');mask-image:url('images/ic-services.png')"></span></span>
-          <span class="qt-main"><span class="qt-label">Услуги</span><span class="qt-sub">6 направлений</span></span>
+          <span class="qt-main"><span class="qt-label">Услуги <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">6 направлений</span></span>
         </a>
         <a href="#countries" class="qtile">
           <span class="qt-idx">02</span>
           <span class="qt-badge"><span class="qt-ic" style="-webkit-mask-image:url('images/ic-countries.png');mask-image:url('images/ic-countries.png')"></span></span>
-          <span class="qt-main"><span class="qt-label">Страны</span><span class="qt-sub">18 направлений</span></span>
+          <span class="qt-main"><span class="qt-label">Страны <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">18 направлений</span></span>
         </a>
         <a href="#process" class="qtile">
           <span class="qt-idx">03</span>
           <span class="qt-badge"><span class="qt-ic" style="-webkit-mask-image:url('images/ic-process.png');mask-image:url('images/ic-process.png')"></span></span>
-          <span class="qt-main"><span class="qt-label">Как мы работаем</span><span class="qt-sub">4 шага</span></span>
+          <span class="qt-main"><span class="qt-label">Как мы работаем <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">4 шага</span></span>
         </a>
         <a href="#why" class="qtile">
           <span class="qt-idx">04</span>
           <span class="qt-badge"><span class="qt-ic" style="-webkit-mask-image:url('images/ic-guarantees.png');mask-image:url('images/ic-guarantees.png')"></span></span>
-          <span class="qt-main"><span class="qt-label">Гарантии</span><span class="qt-sub">почему нам верят</span></span>
+          <span class="qt-main"><span class="qt-label">Гарантии <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">почему нам верят</span></span>
         </a>
         <a href="Contacts.dc.html" class="qtile qtile-accent">
           <span class="qt-idx">05</span>
           <span class="qt-badge"><span class="qt-ic" style="-webkit-mask-image:url('images/ic-consult.png');mask-image:url('images/ic-consult.png')"></span></span>
-          <span class="qt-main"><span class="qt-label">Консультация</span><span class="qt-sub">бесплатно</span></span>
+          <span class="qt-main"><span class="qt-label">Консультация <svg class="qt-arw" width="14" height="10" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5.5h11.5M8.5 1l4.5 4.5-4.5 4.5"></path></svg></span><span class="qt-sub">бесплатно</span></span>
         </a>
       </div>
     </div>
